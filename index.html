@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nemish Sharma - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Playfair Display', serif;
+            background-color: #bda29c;
+            color: #353535;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 50px auto 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .con {
+            padding: 20px;
+            background-color: #f2e9da;
+            max-width: 1600px;
+            min-height: 50px;
+            margin: 100px auto 10px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            border-radius: 10px;
+        }
+
+        
+
+        .containerABT {
+            padding: 20px;
+            background-color: #f2e9da;
+            max-width: 1600px;
+            min-height: 1650px;
+            margin: 10px auto 10px;
+            display: grid;
+            grid-template-columns: 1fr 1.8fr;
+            gap: 20px;
+            border-radius: 10px;
+        }
+
+        header {
+            background-color: #f2e9da;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        nav a {
+            font-size: 1.5rem;
+            margin-left: 20px;
+            text-decoration: none;
+            color: #2f2f2f;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #9c1e40;
+        }
+
+        .hero {
+            grid-column: 1 / 2;
+            background-color: #f2e9da;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border-radius: 15px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 2vh;
+        }
+
+        .hero p {
+            font-size: 1.7rem;
+            font-weight: 500;
+            margin-bottom: 2vh;
+        }
+
+        .hero .social {
+            margin: 2vh 0;
+        }
+
+        .hero button {
+            width: 60%;
+            padding: 10px;
+            border: none;
+            outline: none;
+            border-radius: 20px;
+            font-size: 3.5vh;
+            letter-spacing: 0.5px;
+            cursor: pointer;
+            box-shadow: 0 0 10px -5px #007BFF;
+            background-color: #9c1e40de;
+            color: white;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .hero button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(156, 30, 64, 0.4);
+        }
+
+        .hero .social button {
+            width: 30%;
+            margin-right: 10px;
+        }
+
+        .image-wrapper {
+            position: relative;
+            background-color: transparent;
+            border-radius: 15px;
+            overflow: hidden;
+            grid-column: 2 / 3;
+        }
+
+        .image-wrapper img {
+
+            margin-top: 10px;
+            width: 100%;
+            border-radius: 15px;
+            height: auto;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .hero:hover~.image-wrapper img,
+        .image-wrapper:hover img {
+            transform: scale(1.1);
+        }
+
+        .Proj {
+            margin-left: 40px;
+            font-size: 4rem;
+            font-weight: bold;
+            color: #2f2f2f;
+        }
+
+        .right-panel,
+        .right-panel1 {
+            background-color: #f2e9da;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            margin-top: 30px;
+            gap: 60px;
+            padding: 40px;
+        }
+
+        .left-panel,
+        .left-panel1 {
+            margin-top: 110px;
+            margin-right: 50px;
+            background-color: #f2e9da;
+            border-radius: 20px;
+        }
+
+        #dataproj {
+            font-size: 3vh;
+            line-height: 1.6;
+        }
+
+        #demi {
+
+            margin-top: 1vh;
+            font-size: 4.5vh;
+            color: #fff;
+            background-color: #7a1733;
+            height: 4vw;
+            width: 4.5vw;
+            border-radius: 50px;
+            transition: transform 0.6s ease;
+            /* Smooth transition for the hover effect */
+        }
+
+        /* Hover effect to rotate the button */
+        #demi:hover {
+            transform: rotate(360deg);
+            /* Rotate the button by 360 degrees */
+        }
+
+        .expertise-slider {
+            margin-top: 10vh;
+            align-items: center;
+            justify-content: flex-start;
+            border-radius: 40px;
+
+            /* Added padding to create space on both sides */
+            padding: 20px 50px;
+            /* 20px top/bottom, 50px left/right for the wall effect */
+
+            overflow: hidden;
+            /* Hide overflow content */
+            white-space: nowrap;
+            /* Prevent line breaks */
+            position: relative;
+            /* Positioning context for the slider */
+            background-color: #f2e9da;
+            /* Background color */
+        }
+
+        /* Optional: Add borders to create a wall effect */
+        .expertise-slider:before,
+        .expertise-slider:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 30px;
+            /* Width of the wall */
+            background-color: #9c1e40;
+            /* Color of the wall */
+            z-index: 1;
+            /* Behind the content */
+        }
+
+        .expertise-slider:before {
+            left: 0;
+            /* Left wall */
+        }
+
+        .expertise-slider:after {
+            right: 0;
+            /* Right wall */
+        }
+
+        .slider-wrapper {
+            display: inline-block;
+            /* Align slides horizontally */
+            animation: slide 25s linear infinite;
+            /* Infinite animation */
+            transition: transform 0.5s ease;
+            /* Smooth transition for rotation */
+        }
+
+        .slide:hover i {
+            transform: rotate(360deg);
+            /* Rotate each icon */
+            transition: transform 0.5s ease;
+            /* Smooth rotation transition */
+        }
+
+
+
+
+
+
+        .slide {
+
+            display: inline-block;
+            /* Display slides inline */
+            width: 140px;
+            /* Set a fixed width for slides */
+            margin: 0 50px;
+            /* Margin between slides */
+            text-align: center;
+            /* Center the content */
+            font-size: 1.3rem;
+            font-weight: 600;
+            /* Font size for the text */
+            color: #9c1e40;
+            /* Text color */
+        }
+
+        @keyframes slide {
+            0% {
+                transform: translateX(0);
+            }
+
+            /* Start position */
+            100% {
+                transform: translateX(-50%);
+            }
+
+            /* End position, adjust to translate half of the slides */
+        }
+
+        /* Adjust icon size if needed */
+        .slide i {
+            display: block;
+            /* Block for proper spacing */
+            margin-bottom: 10px;
+            /* Space between icon and text */
+            font-size: 3cqw;
+            /* Adjust icon size */
+        }
+
+
+
+
+        .event-link {
+            font-size: 3.5rem;
+            font-weight: bold;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #9c1e40;
+            transition: color 0.3s ease;
+        }
+
+        .event-link:hover {
+            color: #7a1733;
+        }
+
+        .dynamic-text {
+            color: #9c1e40;
+            font-size: 4rem;
+            position: relative;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        }
+
+        .dynamic-text.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .event-linkB,
+        .event-linkB1 {
+            display: block;
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%;
+            /* 16:9 aspect ratio */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            text-decoration: none;
+            color: #2f2f2f;
+            border-radius: 10px;
+            transition: transform 0.5s ease;
+            position: relative;
+        }
+
+        .event-linkB {
+            background-image: url('backpo.jpg');
+        }
+
+        .event-linkB1 {
+            background-image: url("Untitled.jpg");
+        }
+
+        .event-linkB:hover,
+        .event-linkB1:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .event-linkB::before,
+        .event-linkB1::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 80%;
+            background-color: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            border-radius: 50% 50% 0 0;
+        }
+
+        .event-linkB:hover::before,
+        .event-linkB1:hover::before {
+            opacity: 1;
+        }
+
+        .event-linkB button,
+        .event-linkB1 button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0.9);
+            opacity: 0;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            background-color: #2f2f2f;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+
+        .event-linkB:hover button,
+        .event-linkB1:hover button {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            border-top: 2px solid #2f2f2f;
+            margin-top: 50px;
+        }
+
+        .contact {
+            font-size: 1.2rem;
+        }
+
+        .social-links a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: #2f2f2f;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #9c1e40;
+        }
+
+        .right-panel,
+        .right-panel1,
+        .left-panel,
+        .left-panel1 {
+            opacity: 0;
+            /* Make them invisible initially */
+            transform: translateX(-100px);
+            /* Shift them 100px to the left */
+            transition: opacity 0.8s ease-out, transform 0.8s ease-in-out;
+            /* Smooth fade-in and move */
+        }
+
+        /* When the project comes into view, fade it in and move it to the normal position */
+        .show {
+
+            z-index: 100;
+            opacity: 1;
+            /* Make them visible */
+            transform: translateX(0);
+            /* Move them to their original position */
+        }
+
+
+
+        /* mediaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaA */
+
+        @media (max-width: 768px) {
+
+            .container,
+            .containerABT {
+                grid-template-columns: 1fr;
+            }
+
+            .hero,
+            .image-wrapper,
+            .card {
+                grid-column: 1;
+            }
+
+            .right-panel,
+            .right-panel1 {
+                padding: 20px;
+            }
+
+            .event-linkB,
+            .event-linkB1 {
+                height: 40vh;
+            }
+
+            #dataproj {
+                font-size: 2.5vh;
+                width: 100%;
+            }
+
+            #demi {
+                margin-left: 1vh;
+                margin-top: 1vh;
+                font-size: 4.5vh;
+                color: #fff;
+                background-color: #7a1733;
+                height: 20vw;
+                width: 20vw;
+                border-radius: 50px;
+                transition: transform 0.6s ease;
+                /* Smooth transition for the hover effect */
+            }
+
+            .hero button,
+            .hero .social button {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+
+            .Proj {
+                margin-left: 0;
+                font-size: 3rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">Nemish Sharma</div>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <div class="container" id="about">
+        <div class="hero">
+            <h1>Let's <strong><span class="dynamic-text" data-text="Design"></span></strong></h1>
+            <p>I am a dedicated and passionate software engineer, recognized for my problem-solving skills and expertise
+                in various technologies.</p>
+            <p>Based in India, I develop innovative solutions that leave a lasting impact across various projects,
+                driving efficiency and delivering exceptional user experiences.</p>
+
+            <div class="social">
+                <button onclick="window.open('https://github.com/NIKKU-29', '_blank')">
+                    <i class="fa-brands fa-github"></i>
+                </button>
+                <button onclick="window.open('https://www.linkedin.com/in/nemish-sharma-a31b7821b/', '_blank')">
+                    <i class="fa-brands fa-linkedin"></i>
+                </button>
+            </div>
+
+            <button
+                onclick="window.open('Nemih Sharma CV 06314804921 EEE MAIT 9871586906_NEW.pdf', '_blank')">Résumé</button>
+        </div>
+
+        <div class="image-wrapper">
+            <img src="noJitterID.png" alt="Nemish Sharma">
+        </div>
+    </div>
+
+    <div class="expertise-slider">
+
+      
+        <div class="slider-wrapper">
+            <div class="slide"><i class="fab fa-html5"></i> HTML</div>
+            <div class="slide"><i class="fab fa-css3-alt"></i> CSS</div>
+            <div class="slide"><i class="fab fa-js"></i> JavaScript</div>
+            <div class="slide"><i class="fab fa-react"></i> React.js</div>
+            <div class="slide"><i class="fab fa-node-js"></i> Node.js</div>
+            <div class="slide"><i class="fab fa-python"></i> Python</div>
+            <div class="slide"><i class="fas fa-database"></i> SQL</div>
+            <div class="slide"><i class="devicon-mongodb-plain"></i> MongoDB</div> <!-- MongoDB Logo -->
+            <div class="slide"><i class="devicon-cplusplus-plain"></i> C++</div> <!-- C++ Logo -->
+            <div class="slide"><i class="devicon-csharp-plain"></i> C#</div> <!-- C# Logo -->
+
+            <!-- Duplicate the slides for continuous effect -->
+            <div class="slide"><i class="fab fa-html5"></i> HTML</div>
+            <div class="slide"><i class="fab fa-css3-alt"></i> CSS</div>
+            <div class="slide"><i class="fab fa-js"></i> JavaScript</div>
+            <div class="slide"><i class="fab fa-react"></i> React.js</div>
+            <div class="slide"><i class="fab fa-node-js"></i> Node.js</div>
+            <div class="slide"><i class="fab fa-python"></i> Python</div>
+            <div class="slide"><i class="fas fa-database"></i> SQL</div>
+            <div class="slide"><i class="devicon-mongodb-plain"></i> MongoDB</div> <!-- MongoDB Logo -->
+            <div class="slide"><i class="devicon-cplusplus-plain"></i> C++</div> <!-- C++ Logo -->
+            <div class="slide"><i class="devicon-csharp-plain"></i> C#</div> <!-- C# Logo -->
+        </div>
+    </div>
+
+
+    <div class="con">
+        <div class="Proj"><strong>Projects</strong></div>
+    </div>
+    <div class="containerABT" id="projects">
+
+        <div class="right-panel">
+            <hr style="height: 5px; background-color: #9c1e40;; border: none;">
+
+            <a href="#" class="event-link">Vines & Co</a>
+            <div class="Lan">
+                <p id="dataproj">
+                    The Vines & Co. website offers a sleek, visually captivating platform for wine enthusiasts. With its
+                    modern design, intuitive interface, and interactive features, it elevates the wine exploration
+                    experience, making it engaging and enjoyable for users.
+                    <br><br>
+                    <button id="demi"
+                        onclick="window.open('https://developer.mozilla.org/en-US/docs/Web/HTML', '_blank')">
+                        <i class="fa-brands fa-html5"></i>
+                    </button>
+                    <button id="demi"
+                        onclick="window.open('https://developer.mozilla.org/en-US/docs/Web/CSS', '_blank')">
+                        <i class="fa-brands fa-css3-alt"></i>
+                    </button>
+                    <button id="demi"
+                        onclick="window.open('https://developer.mozilla.org/en-US/docs/Web/JavaScript', '_blank')">
+                        <i class="fa-brands fa-js"></i>
+                    </button>
+                    <br><br>
+
+                </p>
+            </div>
+        </div>
+
+        <div class="left-panel">
+
+            <a href="https://nikku-29.github.io/VinesAndCompany/" class="event-linkB">
+                <button>Visit Website</button>
+            </a>
+
+        </div>
+
+
+
+        <div class="right-panel1">
+            <hr style="height: 5px; background-color:#14053C; border: none;">
+
+            <a href="#" class="event-link" style="color:#14053C">Practical Buddy</a>
+            <div class="Lan">
+                <p id="dataproj">
+                    Introducing Practical Buddy, a user-friendly web platform for Electrical and Electronics Engineering
+                    students. It offers subject outlines, viva questions, and key resources in one place, streamlining
+                    practical exam preparation and enhancing understanding of complex concepts.
+                    <br><br>
+                    <button id="demi" style="background-color:#010626"
+                        onclick="window.open('https://developer.mozilla.org/en-US/docs/Web/HTML', '_blank')">
+                        <i class="fa-brands fa-html5"></i>
+                    </button>
+                    <button id="demi" style="background-color:#010626"
+                        onclick="window.open('https://developer.mozilla.org/en-US/docs/Web/CSS', '_blank')">
+                        <i class="fa-brands fa-css3-alt"></i>
+                    </button>
+                    <button id="demi" style="background-color:#010626"
+                        onclick="window.open('https://developer.mozilla.org/en-US/docs/Web/JavaScript', '_blank')">
+                        <i class="fa-brands fa-js"></i>
+                    </button>
+                    <br>
+                    <br>
+
+                </p>
+            </div>
+        </div>
+
+        <div class="left-panel1">
+            <a href="#" class="event-linkB1">
+                <button>Coming soon</button>
+            </a>
+        </div>
+    </div>
+
+    <footer id="contact">
+        <div class="contact">Contact <em>me</em></div>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+            <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+            <a href="#"><i class="fab fa-pinterest"></i> Pinterest</a>
+        </div>
+    </footer>
+
+    <script>
+        const dynamicText = document.querySelector('.dynamic-text');
+        const texts = ['`Design`', '`Create`', '`Code`'];
+        let index = 0;
+
+        function changeText() {
+            dynamicText.classList.remove('show');
+            setTimeout(() => {
+                dynamicText.textContent = texts[index];
+                dynamicText.setAttribute('data-text', texts[index]);
+                dynamicText.classList.add('show');
+                index = (index + 1) % texts.length;
+            }, 500);
+        }
+
+        setInterval(changeText, 3000);
+        changeText();
+
+        // Select all matching elements
+        document.querySelectorAll('a[href^="#projects"]').forEach(link => {
+            // Add event listener to each link
+            link.addEventListener('click', function (event) {
+                event.preventDefault(); // Prevent the default anchor behavior (jumping)
+                document.getElementById('projects').scrollIntoView({ behavior: 'smooth' }); // Smooth scroll to projects section
+            });
+        });
+
+
+        // Select all panels that need to be observed
+        const projectPanels = document.querySelectorAll('.right-panel, .right-panel1, .left-panel, .left-panel1');
+
+        // Create an intersection observer
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Add the 'show' class to make the panels fade in from the left
+                    entry.target.classList.add('show');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 }); // Trigger the fade-in when 10% of the element is visible
+
+        // Observe each project panel
+        projectPanels.forEach(panel => {
+            observer.observe(panel);
+        });
+
+        const sliderWrapper = document.querySelector('.slider-wrapper');
+
+        function pauseAnimation() {
+            sliderWrapper.style.animationPlayState = 'paused';
+            sliderWrapper.style.transform = 'rotate(360deg)';
+        }
+
+        function resumeAnimation() {
+            sliderWrapper.style.animationPlayState = 'running';
+        }
+
+        sliderWrapper.addEventListener('mouseenter', pauseAnimation);
+        sliderWrapper.addEventListener('mouseleave', resumeAnimation);
+
+
+    </script>
+</body>
+
+</html>
