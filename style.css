@@ -759,6 +759,10 @@
                 grid-template-columns: 1fr;
             }
 
+               body {
+            overflow-x: hidden;
+        }
+
             .hero,
             .image-wrapper,
             .card {
