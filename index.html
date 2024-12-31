@@ -49,6 +49,7 @@
                 <br>
                 <p>I am a dedicated software engineer, recognized for my problem-solving skills and expertise
                     in various technologies.</p>
+                    <br>
                 <p>Based in India, I develop solutions that leave a lasting impact alongside delivering exceptional user
                     experiences.</p>
 
@@ -61,11 +62,10 @@
                     </button>
                 </div>
 
-                <button onclick="window.open('Nemih Sharma CV 06314804921 EEE MAIT 9871586906_NEW.pdf', '_blank')"
-                    style="display: flex; align-items: center; justify-content: center; height: 6vw; width: 25vw;">
+                <button id="resume" onclick="window.open('Nemih Sharma CV 06314804921 EEE MAIT 9871586906_NEW.pdf', '_blank')">
                     <strong
-                        style="font-family: 'nin', Tahoma, Geneva, Verdana, sans-serif; font-size: 100%;">Résumé</strong>
-                    <img src="down.svg" alt="">
+                        style="font-family: 'nin', Tahoma, Geneva, Verdana, sans-serif;">Résumé</strong>
+                    <img class="down" src="down.svg" alt="">
                 </button>
             </div>
 
@@ -78,6 +78,7 @@
                         <div class="fonti-boxA">
                             <div class="top-section">
                                 <div id="game-container">
+        
                                     <div id="play-button">PLAY</div>
                                     <div id="timer"
                                         style="font-size: 0.8vw; color: white; position: absolute; top: 1vw; right: 1vw;">
@@ -85,16 +86,17 @@
                                     <div id="score">Score: 0</div>
 
                                 </div>
+
                             </div>
                         </div>
 
                     </div>
                     <div>
-
+                        
+                        <hr id="seperator" style="height: 2px; background: linear-gradient(to right, royalblue, whitesmoke); border: none;">
                         <div class="Stack">
                             Stack & Technologies
                         </div>
-
                         <div class="bottom-section">
                             <div class="language-btn">
                                 <i class="fab fa-react"></i>
@@ -112,9 +114,9 @@
                                 <i class="fab fa-css3-alt"></i>
                                 <span>CSS</span>
                             </div>
-                            <div class="language-btn">
-                                <i class="fab fa-js" id="jsn" style="margin-right: 0vw;"></i>
-                                <span> JavaScript</span>
+                            <div class="language-btn" id="jjss">
+                                <i class="fab fa-js" "></i>
+                                <span style="font-size: 1.1vw;"> JavaScript</span>
                             </div>
 
                             <div class="language-btn">
@@ -134,14 +136,16 @@
                                 <span>C#</span>
                             </div>
                         </div>
+                        
                     </div>
-
+                    
                 </div>
                 <div>
+
                     <div class="containerL">
                         <div class="progress-container">
                             <div class="milestone school">
-                                <div class="milestone-dot"></div>
+                                <div class="milestone-dot" id="p"></div>
                                 <div class="milestone-text">
                                     <p class="milestone-titleA">
                                         <em>
@@ -156,7 +160,7 @@
                             </div>
 
                             <div class="milestone btech">
-                                <div class="milestone-dot"></div>
+                                <div class="milestone-dot" id="q"></div>
                                 <div class="milestone-text">
                                     <p class="milestone-titleB">
                                         <em>
@@ -304,7 +308,7 @@
                     <div class="slider">
                         <div class="slide">
                             <div class="content-wrapper">
-                                <div class="slide-image" style="background-image: url('12-Skal.jpg');"></div>
+                                <div class="slide-image" id="img1" style="background-image: url('12-Skal.jpg');"></div>
                                 <div class="slide-text" id="a">SKaL AGENCE</div>
                                 <div class="description" id="d">
                                     Served as a sub-mentor, guiding and supporting students in learning web development
@@ -314,20 +318,19 @@
                         </div>
                         <div class="slide">
                             <div class="content-wrapper">
-                                <div class="slide-image" style="background-image: url('ans.jpg');"></div>
+                                <div class="slide-image" id="img2" style="background-image: url('ans.jpg');"></div>
                                 <div class="slide-text" id="b">Ans Worldwide Limited</div>
                                 <div class="description" id="e">
-                                    Building robust server-side applications and APIs using Node.js, Python, and
-                                    databases.
+                                    Built responsive web applications as a Frontend Developer using React.js and JavaScript.
                                 </div>
                             </div>
                         </div>
                         <div class="slide">
                             <div class="content-wrapper">
-                                <div class="slide-image" style="background-image: url('generateblack.jpg');"></div>
-                                <div class="slide-text" id="c">Full Stack Development</div>
+                                <div class="slide-image" id="img3" style="background-image: url('generateblack.jpg');"></div>
+                                <div class="slide-text" id="c">SPACE.ai</div>
                                 <div class="description" id="f">
-                                    Combining front-end and back-end expertise to create complete web applications.
+                                    Worked on generative AI projects for Space.ai, focusing on innovative solutions and advanced AI models.
                                 </div>
                             </div>
                         </div>
@@ -417,24 +420,24 @@
                         streamlining
                         practical exam preparation and enhancing understanding of complex concepts.
                         <br><br>
-                        <button id="demi" style="background-color:#22211E"
-                            onclick="window.open('https://developer.mozilla.org/en-US/docs/Web/HTML', '_blank')">
+                        <button id="demi" style="background-color:#22211E" 
+                            onclick="window.open('https://developer.mozilla.org/en-US/docs/Web/HTML', '_blank')" title="HTML">
                             <i class="fa-brands fa-html5"></i>
                         </button>
-                        <button id="demi" style="background-color:#22211E"
-                            onclick="window.open('https://developer.mozilla.org/en-US/docs/Web/CSS', '_blank')">
+                        <button id="demi" style="background-color:#22211E" 
+                            onclick="window.open('https://developer.mozilla.org/en-US/docs/Web/CSS', '_blank')" title="CSS">
                             <i class="fa-brands fa-css3-alt"></i>
                         </button>
-                        <button id="demi" style="background-color:#22211E"
-                            onclick="window.open('https://developer.mozilla.org/en-US/docs/Web/JavaScript', '_blank')">
+                        <button id="demi" style="background-color:#22211E" 
+                            onclick="window.open('https://developer.mozilla.org/en-US/docs/Web/JavaScript', '_blank')" title="JavaScript">
                             <i class="fa-brands fa-js"></i>
                         </button>
-                        <button id="demi" style="background-color:#22211E"
-                            onclick="window.open('https://nodejs.org/en/docs/', '_blank')">
+                        <button id="demi" style="background-color:#22211E" 
+                            onclick="window.open('https://nodejs.org/en/docs/', '_blank')" title="Node.js">
                             <i class="fa-brands fa-node-js"></i>
                         </button>
-                        <button id="demi" style="background-color:#22211E"
-                            onclick="window.open('https://swiperjs.com/get-started', '_blank')">
+                        <button id="demi" style="background-color:#22211E" 
+                            onclick="window.open('https://swiperjs.com/get-started', '_blank')" title="Swiper.js">
                             <i class="fa-solid fa-swimmer"></i>
                         </button>
                         <br>
@@ -485,8 +488,7 @@
                 <div id="lastR">
                     <div class="find"><em> <strong>Find Me</strong></em></em></div>
 
-                    <div
-                        style="height: 15vw; width: 67%; border-radius: 20px; margin-left: 2vw; background-color: #22211E;">
+                    <div id="lastkill">
                         <a href="https://dev.to/nemish" target="_blank">
                             <div id="devImg"></div>
                         </a>
@@ -495,10 +497,10 @@
 
                     <div id="lastbutton"">
 
-                    <button id=" instaButton"
+                    <!-- <button id=" instaButton"
                         onclick="window.open('https://www.instagram.com/_nemish.sharma/', '_blank')">
                         <i class="fab fa-instagram"></i>
-                        </button>
+                        </button> -->
 
                         <!-- Twitter Button -->
                         <button id="twitterButton" onclick="window.open('https://x.com/Nesh61839047', '_blank')">
