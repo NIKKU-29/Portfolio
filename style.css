@@ -50,7 +50,7 @@ body {
 .container {
     height: 40vw;
     max-width: 85vw;
-    margin: 4.5vw auto 0;
+    margin: 5.5vw auto 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2vw;
@@ -3055,7 +3055,7 @@ header.scrolled {
     transform: translateY(0);
     color: white;
 }
-    .header{
-        margin-top:2vw;
+    header{
+        margin-top:3vw;
 }
 }
