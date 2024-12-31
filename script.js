@@ -390,7 +390,7 @@ function showSlide(index) {
         slider.style.transition = 'transform 1s ease';
     } else {
         currentSlide = index;
-        slider.style.transform = `translateX(-${currentSlide * 115}%)`;
+        slider.style.transform = `translateX(-${currentSlide * 100}%)`;
     }
     if (currentSlide == 2) {
         currentSlide = -1;
