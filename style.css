@@ -2633,7 +2633,7 @@ button:hover img {
     .container {
         height: 150vw;
         max-width:92vw;
-        margin: 5vw auto 0;
+        margin: 7vw auto 0;
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 2vw;
@@ -3054,5 +3054,8 @@ header.scrolled {
     letter-spacing: 0.5px;
     transform: translateY(0);
     color: white;
+}
+    .header{
+        margin-top:2vw;
 }
 }
