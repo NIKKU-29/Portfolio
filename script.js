@@ -89,7 +89,7 @@ const observer = new IntersectionObserver((entries, observer) => {
             observer.unobserve(entry.target);
         }
     });
-}, { threshold: 0.3 }); // Trigger the fade-in when 10% of the element is visible
+}, { threshold: 0.1 }); // Trigger the fade-in when 10% of the element is visible
 
 // Observe each project panel
 projectPanels.forEach(panel => {
