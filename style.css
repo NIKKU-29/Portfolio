@@ -1152,11 +1152,7 @@ button:hover {
 
 #lastR {
     width: 100%;
-    border-left: 4px solid whitesmoke;
-    border-right: 4px solid whitesmoke;
-    border-image: linear-gradient(to bottom, royalblue, whitesmoke) 1;
-
-
+    border: none;
 }
 
 
@@ -2583,7 +2579,7 @@ button:hover img {
 
     .containerABT {
         display: block;
-        height: 430vw;
+        height: 450vw;
         width: 95%;
     }
 
@@ -2603,7 +2599,7 @@ button:hover img {
     }
 
     footer{
-        height: 60vw;
+        height: 120vw;
     }
 
     .Proj{
@@ -3025,20 +3021,57 @@ button img {
 
 
 #cont{
-    font-size: 3vw;
+    font-size: 5vw;
+    margin-left: 1vw;
+    margin-top: 1vw;
+    text-decoration: underline;
+}
+#lastkill {
+    height: 19vw;
+    width: 67%;
+    border-radius: 20px;
+    margin-left: 2vw;
+    background-color: #22211E;
 }
 
+#goli {
+    display: flex;
+    flex-direction: column;
+
+}
 .find{
-    font-size: 2.2vw;
+    margin-top: 10vw;
+    font-size: 4vw;
+    margin-bottom: 3vw;
+    text-decoration: underline;
+}
+label {
+    font-size: 3vw;
+    font-weight: bold;
+    color: whitesmoke;
+}
+
+#sheesh {
+    width: 100%;
+    margin-top: 2vw;
 }
 
 #twitterButton, #discordButton {
-    margin-top: -2vw;
-    height: 20vw;
+    margin-top: 0vw;
+    height: 10vw;
     width: 14vw;
     margin-bottom: 0.5vw;
     font-size: 4vw;
     padding: 2vw;
+    margin-left: 2vw;
+}
+
+#lastbutton {
+    margin-top: 3vw;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 2.2vw;
+    
 }
 .form-group {
     margin-bottom: 1.2vw;
@@ -3057,11 +3090,15 @@ header.scrolled {
 
 #leetcodeButton {
     
-    height: 20vw;
+    height: 10vw;
     width: 14vw;
-    font-size: 30px;
-    margin-top: 2vw;
-    margin-bottom: 0vw;
+    margin-left: 2vw;
+    margin-top:-0.05vw;
+}
+
+#leetcodeButton img {
+    height: 6vw;
+    filter: invert(1);
 }
 
 .music-icon {
@@ -3089,6 +3126,19 @@ header.scrolled {
     font-size: 4vw;
     margin-left: 4vw;
     
+}
+
+button {
+
+    padding: 2vw;
+    background-color: #22211E;
+    border: none;
+    border-radius: 15px;
+    color: #fff;
+    font-size: 2.5vw;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    display: inline-block;
 }
 
 .bottle-box #c {
