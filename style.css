@@ -2372,7 +2372,8 @@ button {
 
 button i,
 button img {
-    font-size: 1.2em;
+    font-size: 8vw;
+    margin-bottom: 2vw;
     transition: transform 0.3s ease-in-out;
 }
 
@@ -2555,7 +2556,7 @@ button:hover img {
         font-size: 4.5vh;
         color: #fff;
         background-color: #22211E;
-        height: 8vw;
+        height: 10vw;
         width: 24vw;
         border-radius: 50px;
         transition: transform 0.6s ease;
@@ -2574,7 +2575,7 @@ button:hover img {
 
 
     .hero p {
-        font-size: 1.1rem;
+        font-size: 4.2vw;
         font-weight: 300;
         margin-bottom: 2vh;
         color: whitesmoke;
@@ -2583,7 +2584,7 @@ button:hover img {
 
     .containerABT {
         display: block;
-        height: 320vw;
+        height: 430vw;
         width: 95%;
     }
 
@@ -2625,7 +2626,7 @@ button:hover img {
     }
 
     .hero h1 {
-        font-size: 1.5rem;
+        font-size: 5.2vw;
         margin-bottom: 2vh;
         color: royalblue;
     }
@@ -2803,8 +2804,8 @@ button:hover img {
     width: 100%;
     background-color: #101010;
     border-radius: 1vw;
-    height: 2.5vw;
-    padding: 12px 0px;
+    height: 3vw;
+    padding: 2.5vw 0px;
     display: flex;
     align-items: center;
     font-size: 1.3vw;
@@ -3139,5 +3140,15 @@ header.scrolled {
     letter-spacing: 0.5px;
     transform: translateY(0);
     color: white;
+}
+.background iframe {
+    background-color: #101010;
+    padding: 0vw;
+    width: 47vw;
+    height: 34vw;
+    padding-right: 2.5vw;
+    padding-bottom: 3.5vw;
+    padding-top: 1vw;
+    border: none;
 }
 }
