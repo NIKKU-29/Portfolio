@@ -24,7 +24,7 @@ body {
     font-family: 'nin', sans-serif;
     overflow-x: hidden;
     margin: 0;
-    padding: 2.5vw;
+    padding: 10vw;
     padding-top: 1vw;
     
     position: relative;
@@ -90,7 +90,7 @@ body::after {
 .container {
     height: 41vw;
     max-width: 85vw;
-    margin: 4.2vw auto 0;
+    margin: 5.5vw auto 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2vw;
@@ -132,13 +132,12 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 1.2vw;
+    position:absolute;
     border-radius: 1vw;
-    position: fixed;
-    width: 95%;
+    width: 80%;
     top: 5;
     z-index: 99;
     margin-top: 0vw;
-    margin-bottom: 2vw;
     transition: all 0.3s ease;
     /* border-bottom: 2px solid royalblue;
     border-top: 2px solid royalblue; */
@@ -626,7 +625,7 @@ header.scrolled nav a {
     font-weight: bold;
     color: whitesmoke;
     margin: 0px;
-    font-size: 1.1vw;
+    font-size: 1.0vw;
     letter-spacing: 0.5px;
 }
 
@@ -636,7 +635,7 @@ header.scrolled nav a {
     font-weight: bold;
     color: whitesmoke;
     margin: 0px;
-    font-size: 1.1vw;
+    font-size: 1.0vw;
     letter-spacing: 1px;
 
 }
@@ -1195,7 +1194,7 @@ button:hover {
     grid-gap: 2vw;
     padding: 40px;
     background-color:#131211;
-    width: 85vw;
+    width: 100%;
     margin: 8.2vw auto;
     border-radius: 2vw;
     transition: background-color 0.6s ease;
@@ -1371,10 +1370,9 @@ button:hover {
     flex-direction: row;
 
 }
-
 .bottom-section {
     height: 10.6vw;
-    width: 37vw;
+    width: 100%;
     padding: 1vw 1vw;
     border-radius: 2vw;
     background-color: #101010;
@@ -1383,44 +1381,90 @@ button:hover {
     flex-direction: row;
     justify-content: center;
     gap: 4px;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid transparent;
     animation: moveBorder 5s linear infinite;
 }
 
-@keyframes moveBorder {
+/* @keyframes moveBorder {
     0% {
-        border: 2px solid transparent;
-        border-bottom: 2px solid royalblue;
-        border-right: 2px solid royalblue;
+        border-color: transparent;
+        box-shadow: none;
     }
-
     25% {
-        border: 2px solid transparent;
-        border-bottom: 2px solid royalblue;
-        border-left: 2px solid royalblue;
+        border-color: royalblue;
+        box-shadow: 0 0 10px royalblue;
     }
-
     50% {
-        border: 2px solid transparent;
-        /* border-bottom: 2px solid royalblue; */
-        border-left: 2px solid royalblue;
-        border-top: 2px solid royalblue;
+        border-color: transparent;
+        box-shadow: none;
     }
-
     75% {
-        border: 2px solid transparent;
-        /* border-bottom: 2px solid royalblue; */
-        /* border-left: 2px solid royalblue; */
-        border-top: 2px solid royalblue;
-        border-right: 2px solid royalblue;
+        border-color: whitesmoke;
+        box-shadow: 0 0 10px whitesmoke;
     }
-
     100% {
-        border: 2px solid transparent;
-        border-bottom: 2px solid royalblue;
-        border-right: 2px solid royalblue;
+        border-color: transparent;
+        box-shadow: none;
     }
+} */
+.bottom-section {
+    height: 10.6vw;
+    width: 100%;
+    padding: 1vw 1vw;
+    border-radius: 2vw;
+    background-color: #101010;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    gap: 4px;
+    position: relative;
+    overflow: hidden;
+    border: none;
 }
 
+.bottom-section * {
+    position: relative;
+    z-index: 2;
+}
+
+.bottom-section::before,
+.bottom-section::after {
+    z-index: 1;
+}
+
+.bottom-section::before {
+    content: '';
+    position: absolute;
+    top: -125%;
+    left: -126%;
+    width: 350%;
+    height: 350%;
+    background: conic-gradient(transparent, transparent, transparent, royalblue);
+    animation: rotate 3s linear infinite;
+}
+
+.bottom-section::after {
+    content: '';
+    position: absolute;
+    inset: 4px;
+    background: #101010;
+    border-radius: 1.8vw;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
 
 
 .language-btn {
@@ -1578,7 +1622,7 @@ button:hover {
     font-size: 1.8vw;
     display: inline-block;
     padding-top: 10vw;
-    margin-left: 0.5vw;
+    margin-left: 0.7vw;
     position: absolute;
     white-space: nowrap;
     color: whitesmoke;
@@ -1609,7 +1653,7 @@ button:hover {
     text-decoration: none;
     font-size: 2vw;
     margin-bottom: 13.5vw;
-    margin-left: 7vw;
+    margin-left: 5vw;
     color: whitesmoke;
     transform: translate(0, 0) rotate(-45deg);
     position: relative;
@@ -1836,9 +1880,10 @@ button:hover {
 }
 
 .bottle-box #a {
+    width:100%;
     margin-top: 0.3vw;
-    font-size: 1.6vw;
-    margin-left: 14vw;
+    font-size: 1.5vw;
+    margin-left: 13vw;
     
 
 }
@@ -1846,14 +1891,14 @@ button:hover {
 .bottle-box #b {
     margin-top: 0.3vw;
     font-size: 1.8vw;
-    margin-left: -8.2vw;
+    margin-left: -13.2vw;
 
 }
 
 .bottle-box #c {
     margin-top: 0.3vw;
     font-size: 1.7vw;
-    margin-left: -12vw;
+    margin-left: -17.5vw;
 
 }
 
@@ -1869,10 +1914,10 @@ button:hover {
 }
 
 .bottle-box:hover #e {
-    width: 80%;
+    width: 70%;
     font-size: 1.2vw;
     opacity: 1;
-    margin-left: -12vw;
+    margin-left: -14vw;
     margin-top: 0.3vw;
     letter-spacing: 0.3px;
     transform: translateY(0);
@@ -1880,10 +1925,10 @@ button:hover {
 }
 
 .bottle-box:hover #f {
-    width: 80%;
+    width: 70%;
     opacity: 1;
     font-size: 1.2vw;
-    margin-left: -27vw;
+    margin-left: -30vw;
     margin-top: 0.3vw;
     letter-spacing: 0.5px;
     transform: translateY(0);
@@ -2579,7 +2624,7 @@ button:hover img {
 
     .containerABT {
         display: block;
-        height: 462vw;
+        height: 450vw;
         width: 95%;
     }
 
