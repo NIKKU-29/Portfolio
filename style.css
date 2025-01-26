@@ -2374,18 +2374,27 @@ label {
 input[type="text"],
 input[type="email"],
 textarea {
-
     font-family: 'nin';
     width: 100%;
     padding: 1vw;
     border: 1px solid wheat;
     border-radius: 5px;
-    font-size: 1.5vw;
+    font-size: 3.5vw;
     transition: border-color 0.3s;
-    color: #141414;
+    color: whitesmoke;
     margin-top: 0.7vw;
-    background-color: #5e585a;
+    background-color: #1E1E1E;
+    animation: textColorChange 5s infinite;
 }
+
+@keyframes textColorChange {
+    0% { color: whitesmoke; }
+    25% { color: rgb(65, 134, 225); }
+    50% { color: cyan; }
+    75% { color: rgb(65, 129, 225); }
+    100% { color: whitesmoke; }
+}
+
 
 
 
@@ -2646,7 +2655,7 @@ button:hover img {
     }
 
     footer{
-        height: 120vw;
+        height: 125vw;
     }
 
     .Proj{
