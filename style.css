@@ -2626,7 +2626,7 @@ button:hover img {
 
     .containerABT {
         display: block;
-        height: 450vw;
+        height: 462vw;
         width: 95%;
     }
 
@@ -2719,7 +2719,7 @@ button img {
         grid-gap: 2vw;
         padding: 3vw;
         background-color: rgba(0, 0, 0, 0.445);
-        width: 100%;
+        width: 95%;
         margin: 20vw auto;
         border-radius: 2vw;
         transition: background-color 0.6s ease;
