@@ -1,0 +1,176 @@
+ <div class="expertise-slider">
+
+
+        <div class="slider-wrapper">
+            <div class="slide"><i class="fab fa-html5"></i> HTML</div>
+            <div class="slide"><i class="fab fa-css3-alt"></i> CSS</div>
+            <div class="slide"><i class="fab fa-js"></i> JavaScript</div>
+            <div class="slide"><i class="fab fa-react"></i> React.js</div>
+            <div class="slide"><i class="fab fa-node-js"></i> Node.js</div>
+            <div class="slide"><i class="fab fa-python"></i> Python</div>
+            <div class="slide"><i class="fas fa-database"></i> SQL</div>
+            <div class="slide"><i class="devicon-mongodb-plain"></i> MongoDB</div> <!-- MongoDB Logo -->
+            <div class="slide"><i class="devicon-cplusplus-plain"></i> <strong> C++</strong></div> <!-- C++ Logo -->
+            <div class="slide"><i class="devicon-csharp-plain"></i><strong> C#</strong></div> <!-- C# Logo -->
+
+            <!-- Duplicate the slides for continuous effect -->
+            <div class="slide"><i class="fab fa-html5"></i> HTML</div>
+            <div class="slide"><i class="fab fa-css3-alt"></i> CSS</div>
+            <div class="slide"><i class="fab fa-js"></i> JavaScript</div>
+            <div class="slide"><i class="fab fa-react"></i> React.js</div>
+            <div class="slide"><i class="fab fa-node-js"></i> Node.js</div>
+            <div class="slide"><i class="fab fa-python"></i> Python</div>
+            <div class="slide"><i class="fas fa-database"></i> SQL</div>
+            <div class="slide"><i class="devicon-mongodb-plain"></i> MongoDB</div> <!-- MongoDB Logo -->
+            <div class="slide"><i class="devicon-cplusplus-plain"></i> C++</div> <!-- C++ Logo -->
+            <div class="slide"><i class="devicon-csharp-plain"></i> C#</div> <!-- C# Logo -->
+        </div>
+    </div>
+
+
+    <style>
+        .expertise-slider {
+            display: none;
+            width: 90vw;
+            margin-top: 10vh;
+            align-items: center;
+            justify-content: flex-start;
+            border-radius: 40px;
+            margin-left: 3vw;
+
+            /* Added padding to create space on both sides */
+            padding: 20px 50px;
+            /* 20px top/bottom, 50px left/right for the wall effect */
+
+            overflow: hidden;
+            /* Hide overflow content */
+            white-space: nowrap;
+            /* Prevent line breaks */
+            position: relative;
+            /* Positioning context for the slider */
+            background-color: #f2e9da96;
+
+            /* Background color */
+        }
+
+
+        /* Optional: Add borders to create a wall effect */
+        .expertise-slider:before,
+        .expertise-slider:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 30px;
+            /* Width of the wall */
+            
+            /* Color of the wall */
+            z-index: 1;
+
+            /* Behind the content */
+        }
+
+
+
+        .expertise-slider:before {
+            left: 0;
+            /* Left wall */
+        }
+
+        .expertise-slider:after {
+            right: 0;
+            /* Right wall */
+        }
+
+        .slider-wrapper {
+            display: inline-block;
+            /* Align slides horizontally */
+            animation: slide 25s linear infinite;
+            /* Infinite animation */
+            transition: transform 0.5s ease;
+            /* Smooth transition for rotation */
+        }
+
+        .slide:hover i {
+            transform: rotate(360deg);
+            /* Rotate each icon */
+            transition: transform 0.5s ease;
+            /* Smooth rotation transition */
+        }
+
+
+
+
+
+
+        .slide {
+
+            display: inline-block;
+            /* Display slides inline */
+            width: 140px;
+            /* Set a fixed width for slides */
+            margin: 0 50px;
+            /* Margin between slides */
+            text-align: center;
+            /* Center the content */
+            font-size: 1.3rem;
+            font-weight: 600;
+            /* Font size for the text */
+            color: #22211E;
+            /* Text color */
+        }
+
+        @keyframes slide {
+            0% {
+                transform: translateX(0);
+            }
+
+            /* Start position */
+            100% {
+                transform: translateX(-50%);
+            }
+
+            /* End position, adjust to translate half of the slides */
+        }
+
+        /* Adjust icon size if needed */
+        .slide i {
+            display: block;
+            /* Block for proper spacing */
+            margin-bottom: 10px;
+            /* Space between icon and text */
+            font-size: 3cqw;
+            /* Adjust icon size */
+        }
+    </style>
+
+
+<script>
+    const sliderWrapper = document.querySelector('.slider-wrapper');
+
+function pauseAnimation() {
+    sliderWrapper.style.animationPlayState = 'paused';
+    sliderWrapper.style.transform = 'rotate(360deg) scale(1.1)'; // Combine both transformations
+}
+
+function resumeAnimation() {
+    sliderWrapper.style.animationPlayState = 'running';
+    sliderWrapper.style.transform = ''; // Reset transform to remove scaling and rotation
+}
+
+sliderWrapper.addEventListener('mouseenter', pauseAnimation);
+sliderWrapper.addEventListener('mouseleave', resumeAnimation);
+
+
+window.onload = function () {
+    // Select elements you want to fade in
+    const elements = document.querySelectorAll('.fade-in');
+
+    // Add the 'active' class after a small delay
+    elements.forEach(function (element) {
+        setTimeout(function () {
+            element.classList.add('active');
+        }, 300); // You can adjust the delay here
+    });
+};
+</script>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<style>
+
+    
+       #bento {
+            display: grid;
+            grid-template-columns: repeat(11, 1fr);
+            grid-template-rows: repeat(2, auto);
+            grid-gap: 1vw;
+            padding: 1.5vw;
+            background-color: #dce3f1;
+            width: 1000px;
+            margin: 0 auto;
+            border-radius: 20px;
+            height: 40vw;
+        }
+
+        .box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-color: white;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Specific Box Positions and Sizes */
+        .discount-box {
+            height: 8vw;
+            grid-column: span 3;
+            /* Takes 4 columns */
+            grid-row: span 1;
+            /* Takes 1 row */
+        }
+
+        .font-box {
+            height: 8vw;
+            grid-column: span 2;
+            /* Takes 2 columns */
+            grid-row: span 1;
+        }
+
+        .sign-box {
+            height: 8vw;
+            grid-column: span 3;
+            grid-row: span 1;
+        }
+
+        .phone-box {
+            height: 8vw;
+            grid-column: span 3;
+            grid-row: span 1;
+        }
+
+        .logo-box {
+
+            height: 9vw;
+            grid-column: span 3;
+            grid-row: span 1;
+            /* This is the large logo box */
+        }
+
+        .banner-box {
+            height: 9vw;
+            grid-column: span 5;
+            grid-row: span 0;
+        }
+
+        .da-box{
+            grid-column: span 5;
+            grid-row: span 1;
+        }
+
+        .ad-box {
+            grid-column: span 4;
+            grid-row: span 0;
+        }
+
+        .bottle-box {
+            top:50%;
+            grid-column: span 3;
+            grid-row: span 2;
+            
+        }
+
+        /* Optional: Box hover effect */
+        .box:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease-in-out;
+            background-color: blue;
+        }
+</style>
+
+
+<div id="bento">
+    <!-- Discount Box with video -->
+    <div class="box discount-box">
+        <video src="https://player.vimeo.com/external/393741255.sd.mp4?s=089a34bcd2e6cf79d6cfc5f9f154c59b68c81fd9&profile_id=165" autoplay loop muted></video>
+    </div>
+
+    <!-- Font Box with video -->
+    <div class="box font-box">
+        <video src="https://player.vimeo.com/external/393741251.sd.mp4?s=bdb3b56a4a720eebd7b315373383e3baf5e1785b&profile_id=165" autoplay loop muted></video>
+    </div>
+
+    <!-- Sign Box with video -->
+    <div class="box sign-box">
+        <video src="https://player.vimeo.com/external/469966856.sd.mp4?s=22b9f5b2a2d23b12b012973535cdbb42ef20405b&profile_id=165" autoplay loop muted></video>
+    </div>
+
+    <!-- iPhone Box with video -->
+    <div class="box phone-box">
+        <video src="https://player.vimeo.com/external/499547414.sd.mp4?s=a6f2f17828c7c5b273bb2c8e60d32115dcdccebb&profile_id=165" autoplay loop muted></video>
+    </div>
+
+    <!-- Logo Box with video -->
+    <div class="box logo-box">
+        <video src="https://player.vimeo.com/external/414787215.sd.mp4?s=fa5b37b8bcae9e7e97e67f1450f3789d8b37af5c&profile_id=165" autoplay loop muted></video>
+    </div>
+
+    <!-- Banner Box with video -->
+    <div class="box banner-box">
+        <video src="https://player.vimeo.com/external/488544694.sd.mp4?s=44a96abdb7a7cc93fc5001df4ddca7b77a1b9cc7&profile_id=165" autoplay loop muted></video>
+    </div>
+
+    <!-- Bottle Box with video -->
+    <div class="box bottle-box">
+        <video src="https://player.vimeo.com/external/486911621.sd.mp4?s=3873961a17b16a09a69e380716fd29952de70e9a&profile_id=165" autoplay loop muted></video>
+    </div>
+
+    <!-- Additional Box with video -->
+    <div class="box da-box">
+        <video src="https://player.vimeo.com/external/437173478.sd.mp4?s=33c2da92c0afc0bfb33e2a32ff5a63c1a3d9394c&profile_id=165" autoplay loop muted></video>
+    </div>
+
+    <!-- Sign Box 2 with video -->
+    <div class="box sign-box">
+        <video src="https://player.vimeo.com/external/479700439.sd.mp4?s=47f1449d257c748f160c897e098479b598946960&profile_id=165" autoplay loop muted></video>
+    </div>
+</div>

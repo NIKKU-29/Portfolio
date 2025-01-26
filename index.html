@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nemish Sharma - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link rel="stylesheet" href="style.css">
+
+
+
+</head>
+
+<body>
+
+    <div class="music-icon" onclick="toggleAudio()">
+        <img src="music.svg" alt="Music Icon">
+        <div class="close-overlay" id="close-overlay">✖</div>
+    </div>
+
+    <!-- bar bar na chale isliye path me last me el lagaya hai -->
+    <audio id="background-audio" src="spaceX.mp3" autoplay loop></audio>
+
+
+    
+
+    <div class="fade-in">
+
+        <header>
+            <div class="logo " id="nikku">Nemish Sharma</div>
+            <img src="pf.jpg" alt="Logo" class="logo-img">
+            <nav>
+                <a href="#abt">Inventory</a>
+                <a href="#projects">Battles</a>
+                <a href="#cont">Contact</a>
+            </nav>
+        </header>
+        <br>
+
+        <div class="container">
+            <div class="hero">
+                <h1>Let's <strong><span class="dynamic-text" data-text="Design"></span></strong></h1>
+                <br>
+                <p>I am a dedicated software engineer, recognized for my problem-solving skills and expertise
+                    in various technologies.</p>
+                    <br>
+                <p>Based in India, I develop solutions that leave a lasting impact alongside delivering exceptional user
+                    experiences.</p>
+
+                <div class="social">
+                    <button onclick="window.open('https://github.com/NIKKU-29', '_blank')">
+                        <i class="fa-brands fa-github"></i>
+                    </button>
+                    <button onclick="window.open('https://www.linkedin.com/in/nemish-sharma-a31b7821b/', '_blank')">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </button>
+                </div>
+
+                <button id="resume" onclick="window.open('NEMISH_SHARMA_RESUME_2025.pdf', '_blank')">
+                    <strong
+                        style="font-family: 'nin', Tahoma, Geneva, Verdana, sans-serif;">Résumé</strong>
+                    <img class="down" src="down.svg" alt="">
+                </button>
+            </div>
+
+            <div class="image-wrapper">
+
+                <div id="benti">
+
+                    <div class="rag">
+                        <img src="pf.jpg" alt="">
+                        <div class="fonti-boxA">
+                            <div class="top-section">
+                                <div id="game-container">
+        
+                                    <div id="play-button">PLAY</div>
+                                    <div id="timer"
+                                        style="font-size: 0.8vw; color: white; position: absolute; top: 1vw; right: 1vw;">
+                                        Time Left: 20s</div>
+                                    <div id="score">Score: 0</div>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div>
+                        
+                        <hr id="seperator" style="height: 2px; background: linear-gradient(to right, royalblue, whitesmoke); border: none;">
+                        <div class="Stack">
+                            Stack & Technologies
+                        </div>
+                        <div class="bottom-section">
+                            <div class="language-btn">
+                                <i class="fab fa-react"></i>
+                                <span>React.js</span>
+                            </div>
+                            <div class="language-btn">
+                                <i class="fab fa-node-js"></i>
+                                <span>Node.js</span>
+                            </div>
+                            <div class="language-btn">
+                                <i class="fab fa-html5"></i>
+                                <span>HTML</span>
+                            </div>
+                            <div class="language-btn">
+                                <i class="fab fa-css3-alt"></i>
+                                <span>CSS</span>
+                            </div>
+                            <div class="language-btn" id="jjss">
+                                <i class="fab fa-js" "></i>
+                                <span style="font-size: 1.1vw;"> JavaScript</span>
+                            </div>
+
+                            <div class="language-btn">
+                                <i class="fas fa-database"></i>
+                                <span>SQL</span>
+                            </div>
+                            <div class="language-btn">
+                                <i class="devicon-mongodb-plain"></i>
+                                <span>MongoDB</span>
+                            </div>
+                            <div class="language-btn">
+                                <i class="devicon-cplusplus-plain"></i>
+                                <span>C++</span>
+                            </div>
+                            <div class="language-btn">
+                                <i class="devicon-csharp-plain"></i>
+                                <span>C#</span>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div>
+
+                    <div class="containerL">
+                        <div class="progress-container">
+                            <div class="milestone school">
+                                <div class="milestone-dot" id="p"></div>
+                                <div class="milestone-text">
+                                    <p class="milestone-titleA">
+                                        <em>
+                                            High School [ 2008-2020 ]
+                                            <br>
+                                            Little Flowers Public School
+                                        </em>
+
+                                    </p>
+
+                                </div>
+                            </div>
+
+                            <div class="milestone btech">
+                                <div class="milestone-dot" id="q"></div>
+                                <div class="milestone-text">
+                                    <p class="milestone-titleB">
+                                        <em>
+                                            B.Tech [2021 -2025 ]
+                                            <br>
+                                            Maharaja Agrasen Instiute of Technology
+
+                                        </em>
+                                    </p>
+
+                                </div>
+                            </div>
+
+                            <div class="progress-bar-background">
+                                <div class="progress-bar"></div>
+                            </div>
+
+                            <div class="progress-text"></div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="expertise-slider">
+
+
+        <div class="slider-wrapper">
+
+        </div>
+    </div>
+
+    <div ></div>
+    <div id="abt">
+        <div id="bento" >
+            <!-- Discount Box with video -->
+            <div class="box discount-box" >
+                <img src="diddy.gif" alt="Discount Logo">
+            </div>
+
+            <!-- Font Box -->
+
+
+            <div class="box font-box">
+                <a href="https://github.com/NIKKU-29" target="_blank"
+                    style="display: flex; height: 5vw; align-items: center; justify-content: flex-start; margin-bottom: 0vw;">
+                    <span id="changing-text">Innovate <br> with <br> Purpose</span>
+                    <img src="icons8-github.svg" alt="GitHub" class="gticon">
+                    <i class="fas fa-arrow-right" class="gtarr"></i>
+                </a>
+            </div>
+
+
+            <script>
+                const changingTexts = ['Crafting <br> Digital <br> Dreams', 'Innovate <br> with <br> Purpose', 'Empower <br> Through <br> Code'];
+                let textIndex = 0;
+
+                function changeText() {
+                    const textElement = document.getElementById('changing-text');
+                    textElement.innerHTML = changingTexts[textIndex];
+                    textIndex = (textIndex + 1) % changingTexts.length;
+                }
+
+                setInterval(changeText, 5000); // Change text every 3 seconds // Change text every 3 seconds
+            </script>
+
+            <!-- Sign Box with video -->
+            <div class="box sign-box">
+                <div class="vertical-slider">
+                    <div class="slider-track">
+                        <div class="slide">
+                            <div class="skill-number">01</div>
+                            <div class="skill-title">Website Development</div>
+                            <div class="skill-description">
+                                Experienced in modern web frameworks including React, Node.js, and Express.js delivering multiple successful projects.
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="skill-number">02</div>
+                            <div class="skill-title">UI/UX Designing</div>
+                            <div class="skill-description">
+                                Started my journey in 2020 with a project called Trixz, creating functional websites and
+                                intuitive dashboards.
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="skill-number">03</div>
+                            <div class="skill-title">Graphic Designing</div>
+                            <div class="skill-description">
+                                Worked as a freelance graphic designer in 2020, mastering tools like Adobe Photoshop and
+                                Illustrator.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- iPhone Box with video -->
+            <div class="box phone-box">
+
+                <div class="clock" id="clock"></div>
+                <div class="timezone">
+                    <span class="timezone-text" id="timezone-text">Asia/Kolkata</span>
+                    <span class="timezone-icon" id="timezone-icon">↗</span>
+                </div>
+
+
+            </div>
+
+            <!-- Logo Box with video -->
+
+            <div class="logo-box">
+
+                <div class="background">
+                    <iframe
+                        src="https://leetcard.jacoblin.cool/Nikku29?theme=dark&font=Paytone%20One&ext=contest&bg=9c1e40&text=FFFFFF"
+                        frameborder="0"></iframe>
+                </div>
+                <a href="https://leetcode.com/u/NIKKU29/">
+                    <div class="content-wrapper">
+                        <img src="leetcode.svg" alt="Logo" class="logo" />
+                        <div class="status-text">Among Top 10% Leetcoders</div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Banner Box with video -->
+            <div class="box banner-box" >
+                <p class="one"> Worked Over</p>
+                <p class="two">10<span>+</span></p>
+                <p class="three">Projects</p>
+            </div>
+
+            <!-- Bottle Box with video -->
+            <div class="bottle-box">
+                <div class="slider-container">
+                    <div class="slider">
+                        <div class="slide">
+                            <div class="content-wrapper">
+                                <div class="slide-image" id="img1" style="background-image: url('12-Skal.jpg');"></div>
+                                <div class="slide-text" id="a">SKaL AGENCE</div>
+                                <div class="description" id="d">
+                                    Served as a sub-mentor, guiding and supporting students in learning web development
+                                    principles and practices.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="content-wrapper">
+                                <div class="slide-image" id="img2" style="background-image: url('ans.jpg');"></div>
+                                <div class="slide-text" id="b">Ans Worldwide Limited</div>
+                                <div class="description" id="e">
+                                    Built responsive web applications as a Frontend Developer using React.js and JavaScript.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="content-wrapper">
+                                <div class="slide-image" id="img3" style="background-image: url('generateblack.jpg');"></div>
+                                <div class="slide-text" id="c">SPACE.ai</div>
+                                <div class="description" id="f">
+                                    Worked on generative AI projects for Space.ai, focusing on innovative solutions and advanced AI models.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Box with video -->
+
+
+            <!-- Sign Box 2 with video -->
+            <div class="box line-box"
+                onclick="document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });">
+                <div class="inter">
+                    <h3>Projects</h3>
+                    <p>DDrwwwwww........</p>
+
+                    <img src="driller.gif" alt="" class="flip-horizontal">
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <div class="con">
+            <div class="Proj"><strong>Recent Works</strong></div>
+        </div>
+        <div class="containerABT" id="projects">
+
+            <div class="right-panel">
+                <hr style="height: 5px; background: linear-gradient(to right, #ff004f, whitesmoke); border: none;">
+
+                <a href="#" class="event-link">Vines & Co</a>
+                <div class="Lan">
+                    <p id="dataproj">
+                        The Vines & Co. website offers a sleek, visually captivating platform for wine enthusiasts. With
+                        its
+                        modern design, intuitive interface, and interactive features, it elevates the wine exploration
+                        experience, making it engaging and enjoyable for users.
+                        <br><br>
+                        <button id="demi" style="background-color:#22211E"
+                            onclick="window.open('https://developer.mozilla.org/en-US/docs/Web/HTML', '_blank')">
+                            <i class="fa-brands fa-html5"></i>
+                        </button>
+                        <button id="demi" style="background-color:#22211E"
+                            onclick="window.open('https://developer.mozilla.org/en-US/docs/Web/CSS', '_blank')">
+                            <i class="fa-brands fa-css3-alt"></i>
+                        </button>
+                        <button id="demi" style="background-color:#22211E"
+                            onclick="window.open('https://developer.mozilla.org/en-US/docs/Web/JavaScript', '_blank')">
+                            <i class="fa-brands fa-js"></i>
+                        </button>
+                        <button id="demi" style="background-color:#22211E"
+                            onclick="window.open('https://lenis.darkroom.engineering', '_blank')">
+                            <i class="fa-solid fa-wind"></i>
+                        </button>
+                        <button id="demi" style="background-color:#22211E"
+                            onclick="window.open('https://locomotivemtl.github.io/locomotive-scroll/', '_blank')">
+                            <i class="fa-solid fa-train"></i>
+                        </button>
+                        <br><br>
+
+                    </p>
+                </div>
+            </div>
+
+            <div class="left-panel">
+
+                <a href="https://nikku-29.github.io/VinesAndCompany/" class="event-linkB">
+                    <button>Visit Website</button>
+                </a>
+
+            </div>
+
+
+
+            <div class="right-panel1">
+                <hr style="height: 5px; background: linear-gradient(to right, #001aFF, whitesmoke); border: none;">
+
+                <a href="#" class="event-link" id="practical" style="color:whitesmoke">Practical Buddy</a>
+                <div class="Lan">
+                    <p id="dataproj">
+                        Introducing Practical Buddy, a user-friendly web platform for Electrical and Electronics
+                        Engineering
+                        students. It offers subject outlines, viva questions, and key resources in one place,
+                        streamlining
+                        practical exam preparation and enhancing understanding of complex concepts.
+                        <br><br>
+                        <button id="demi" style="background-color:#22211E" 
+                            onclick="window.open('https://developer.mozilla.org/en-US/docs/Web/HTML', '_blank')" title="HTML">
+                            <i class="fa-brands fa-html5"></i>
+                        </button>
+                        <button id="demi" style="background-color:#22211E" 
+                            onclick="window.open('https://developer.mozilla.org/en-US/docs/Web/CSS', '_blank')" title="CSS">
+                            <i class="fa-brands fa-css3-alt"></i>
+                        </button>
+                        <button id="demi" style="background-color:#22211E" 
+                            onclick="window.open('https://developer.mozilla.org/en-US/docs/Web/JavaScript', '_blank')" title="JavaScript">
+                            <i class="fa-brands fa-js"></i>
+                        </button>
+                        <button id="demi" style="background-color:#22211E" 
+                            onclick="window.open('https://nodejs.org/en/docs/', '_blank')" title="Node.js">
+                            <i class="fa-brands fa-node-js"></i>
+                        </button>
+                        <button id="demi" style="background-color:#22211E" 
+                            onclick="window.open('https://swiperjs.com/get-started', '_blank')" title="Swiper.js">
+                            <i class="fa-solid fa-swimmer"></i>
+                        </button>
+                        <br>
+                        <br>
+
+                    </p>
+                </div>
+            </div>
+
+            <div class="left-panel1">
+                <a href="#" class="event-linkB1">
+                    <button>Coming soon</button>
+                </a>
+            </div>
+        </div>
+
+
+
+
+        <footer id="contact-main">
+
+            <div class="contact" id="cont"><em> <strong>Contact me</strong></em></em></div>
+            <div id="goli">
+
+                <div id="sheesh">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message:</label>
+                            <textarea id="message" name="message" rows="4" required></textarea>
+                        </div>
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+
+
+
+                <!-- <div>SO SOMETING JETE</div> -->
+
+
+                <div id="lastR">
+                    <div class="find"><em> <strong>Find Me</strong></em></em></div>
+
+                    <div id="lastkill">
+                        <a href="https://dev.to/nemish" target="_blank">
+                            <div id="devImg"></div>
+                        </a>
+                    </div>
+
+
+                    <div id="lastbutton"">
+
+                    <!-- <button id=" instaButton"
+                        onclick="window.open('https://www.instagram.com/_nemish.sharma/', '_blank')">
+                        <i class="fab fa-instagram"></i>
+                        </button> -->
+
+                        <!-- Twitter Button -->
+                        <button id="twitterButton" onclick="window.open('https://x.com/Nesh61839047', '_blank')">
+                            <i class="fab fa-twitter"></i>
+                        </button>
+
+                        <button id="discordButton" onclick="window.open('https://discord.gg/WzPCnWxYZZ', '_blank')">
+                            <i class="fab fa-discord"></i>
+                        </button>
+                        <button id="leetcodeButton" onclick="window.open('https://leetcode.com/u/NIKKU29/', '_blank')">
+                            <img src="leetcode.svg" alt=""> <!-- You can use a relevant icon for LeetCode -->
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+    </div>
+    </footer>
+
+    <div style="justify-content: center;">
+        <p style=" margin-left: 4vw; color:white;">&copy; 2024 Nemish Sharma. All rights reserved.</p>
+    </div>
+
+    <script src="script.js"></script>
+
+</html>
+<div id="root"></div>
+<script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+<script type="text/babel">
+    function App() {
+        return (
+            <div>
+
+            </div>
+        );
+    }
+
+    ReactDOM.render(<App />, document.getElementById('root'));
+</script>
