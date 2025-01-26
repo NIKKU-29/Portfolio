@@ -2556,7 +2556,9 @@ button:hover img {
 @media (max-width: 768px) {
 
 
-    
+    body{
+            padding: 1vw;
+    }
 
     .container,
     .containerABT {
