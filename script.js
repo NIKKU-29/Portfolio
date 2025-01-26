@@ -353,25 +353,39 @@ document.addEventListener('DOMContentLoaded', () => {
     new SpaceMonsterGame(gameContainer);
 });
 
+
+
 let audio = document.getElementById("background-audio");
 
 function toggleAudio() {
-    if (audio.paused) {
-        audio.play(); // Play the audio if it's paused
-    } else {
-        audio.pause(); // Pause the audio if it's playing
-    }
+    if (!audio) return; // Guard clause if audio element is not found
 
-    // Toggle the "clicked" class to show the overlay cross
-    document.querySelector('.music-icon').classList.toggle('clicked');
+    try {
+        if (audio.paused) {
+            let playPromise = audio.play();
+            if (playPromise !== undefined) {
+                playPromise.catch(error => {
+                    console.log("Playback prevented by browser");
+                });
+            }
+        } else {
+            audio.pause();
+        }
+        // Toggle the "clicked" class to show the overlay cross
+        document.querySelector('.music-icon').classList.toggle('clicked');
+    } catch (error) {
+        console.log("Audio playback error:", error);
+    }
 }
 
 // Add functionality to the cross overlay to stop audio
-document.getElementById("close-overlay").onclick = function (event) {
+document.getElementById("close-overlay")?.addEventListener('click', function(event) {
     event.stopPropagation(); // Prevent the click from triggering the toggleAudio function
-    audio.pause(); // Stop the audio
-    document.querySelector('.music-icon').classList.remove('clicked'); // Hide the overlay
-};
+    if (audio) {
+        audio.pause(); // Stop the audio
+        document.querySelector('.music-icon').classList.remove('clicked'); // Hide the overlay
+    }
+});
 
 let currentSlide = 0;
 

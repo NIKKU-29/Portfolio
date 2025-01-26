@@ -97,6 +97,7 @@ body::after {
     z-index: 100;
     background-color: #131211;
     border-radius: 2vw;
+    
 }
 
 .con {
@@ -127,7 +128,7 @@ body::after {
 
 header {
 
-    background-color: #131211;
+    background-color: #101010;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -139,8 +140,10 @@ header {
     z-index: 99;
     margin-top: 0vw;
     transition: all 0.3s ease;
-    /* border-bottom: 2px solid royalblue;
-    border-top: 2px solid royalblue; */
+    border: 1px solid royalblue;
+    box-shadow: 0 0 15px rgba(65, 105, 225, 0.3),
+                0 0 30px rgba(249, 249, 250, 0.3);
+    animation: alternateGlow 3s infinite;
     animation:  1.5s infinite alternate;
 }
 
@@ -257,12 +260,15 @@ header.scrolled {
     transform: translateX(0);
     width: 4.8vw;
     padding: 0.5vw 0.3vw;
-    background-color: #181818;
+    background-color: #101010;
     border-radius: 4.5px;
     flex-direction: column;
     align-items: flex-end;
     justify-content: center;
     transition: all 0.6s ease;
+    border: none;
+    box-shadow: none;
+    
 }
 
 header.scrolled .logo {
@@ -941,9 +947,26 @@ footer {
 
 footer.show {
     opacity: 1;
-    /* Fade in */
     transform: translateY(0);
-    /* Move to original position */
+    border: 1px solid royalblue;
+    box-shadow: 0 0 15px rgba(65, 105, 225, 0.3),
+                0 0 30px rgba(249, 249, 250, 0.3);
+    animation: alternateGlow 3s infinite;
+}
+
+@keyframes alternateGlow {
+    0% {
+        box-shadow: 0 0 15px rgba(65, 105, 225, 0.5),
+                   0 0 30px rgba(65, 105, 225, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 15px rgba(249, 249, 250, 0.5),
+                   0 0 30px rgba(249, 249, 250, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 15px rgba(65, 105, 225, 0.5),
+                   0 0 30px rgba(65, 105, 225, 0.5);
+    }
 }
 
 
@@ -1197,8 +1220,16 @@ button:hover {
     width: 100%;
     margin: 8.2vw auto;
     border-radius: 2vw;
-    transition: background-color 0.6s ease;
-    /* Smooth transition for background color */
+    transition: all 0.6s ease;
+    border: 1px solid royalblue;
+    box-shadow: 0 0 20px rgba(65, 105, 225, 0.5),
+                0 0 40px rgba(65, 105, 225, 0.3),
+                0 0 60px rgba(65, 105, 225, 0.2);
+    animation: glow 2s infinite alternate;
+}
+
+#bento:hover {
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.842);
 }
 
 #benti {
@@ -2379,7 +2410,7 @@ textarea {
     padding: 1vw;
     border: 1px solid wheat;
     border-radius: 5px;
-    font-size: 3.5vw;
+    font-size: 1.5vw;
     transition: border-color 0.3s;
     color: whitesmoke;
     margin-top: 0.7vw;
@@ -2733,6 +2764,23 @@ button img {
         border-radius: 2vw;
         transition: background-color 0.6s ease;
     }
+
+
+input[type="text"],
+input[type="email"],
+textarea {
+    font-family: 'nin';
+    width: 100%;
+    padding: 1vw;
+    border: 1px solid wheat;
+    border-radius: 5px;
+    font-size: 3.5vw;
+    transition: border-color 0.3s;
+    color: whitesmoke;
+    margin-top: 0.7vw;
+    background-color: #1E1E1E;
+    animation: textColorChange 5s infinite;
+}
 
 
 
