@@ -2730,7 +2730,7 @@ button img {
     .container {
         height: 150vw;
         max-width: 95vw;
-        margin: 9vw auto 0;
+        margin: 16vw auto 0;
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 2vw;
@@ -2804,8 +2804,7 @@ button img {
 }
 
 .bottom-section {
-    
-    height: 35%;
+    height: 36%;
     width: 100%;
     padding: 2vw 2vw;
     border-radius: 2vw;
@@ -3126,8 +3125,10 @@ label {
 }
 
 header{
-    margin-top: 2vw;
+    margin-top: 2.5vw;
+    margin-left: 2vw;
     padding: 2vw;
+    width: 95%;
 }
 
 header.scrolled {
