@@ -255,7 +255,7 @@ document.addEventListener('scroll', () => {
 
 
 const timeZones = [
-    'UTC', 'America/New_York', 'Europe/London',
+    'UTC', 'USA/New York', 'Europe/London',
     'Asia/Kolkata', 'Asia/Tokyo', 'Australia/Sydney'
 ];
 let currentZoneIndex = 3; // Start with UTC
