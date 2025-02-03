@@ -25,8 +25,6 @@ body {
     padding: 1vw 10vw;
 }
 
-/*  */
-
 .ripple {
     position: absolute;
     border-radius: 50%;
@@ -35,11 +33,6 @@ body {
     pointer-events: none;
     z-index: 9999;
 }
-
-/* Video background styling */
-
-
-
 
 .container {
     height: 41vw;
@@ -106,7 +99,6 @@ header {
     transition: font-size 0.3s ease;
 }
 
-/* Initially display the text and hide the image */
 
 #nikku {
     filter: none;
@@ -123,14 +115,11 @@ header {
 .logo-img {
     visibility: hidden;
     width: 2vw;
-    /* Set your desired mini image size */
     height: 2vw;
     border-radius: 50%;
     object-fit: contain;
     transition: opacity 0.3s ease;
 }
-
-/* In the scrolled state, hide the text and show the image */
 header.scrolled .logo {
     display: none;
 }
@@ -143,7 +132,6 @@ header.scrolled .logo-img {
     height: 4vw;
 }
 
-/* General nav styling */
 nav {
     display: flex;
     align-items: center;
@@ -151,57 +139,40 @@ nav {
     z-index: 100;
 }
 
-/* Style for nav links */
 nav a {
     font-size: 1.8vw;
     margin-left: 2vw;
     margin-right: 0.5vw;
     text-decoration: none;
-    /* Remove default underline */
     color: whitesmoke;
     font-weight: bold;
     position: relative;
-    /* Make sure the pseudo-element is positioned relative to the anchor */
     overflow: hidden;
-    /* Hide the part of the pseudo-element outside the anchor */
     transition: color 0.3s ease, font-size 0.3s ease;
 }
-
-/* Hover effect for nav links */
 nav a:hover {
     color: royalblue;
 }
 
-/* Create custom underline effect using pseudo-element */
 nav a::after {
     content: '';
-    /* Create an empty pseudo-element */
+
     position: absolute;
-    /* Position it relative to the anchor */
     left: 0;
     bottom: 0px;
-    /* Position it just below the text */
     width: 0%;
-    /* Make the underline initially hidden */
     height: 0.2vw;
-    /* Set the height of the underline */
     border-radius: 50%;
     background-color: royalblue;
-    /* Start with a white underline */
     transition: width 0.6s ease, background-color 1s ease;
-    /* Smooth transition for width and color change */
 }
 
-/* On hover, make the underline appear from right to left and change color */
 nav a:hover::after {
     width: 100%;
-    /* Expand the underline to full width */
     background-color: whitesmoke;
-    /* Change the underline color to #22211E */
 }
 
 
-/* For the header in the scrolled state */
 header.scrolled {
     display: flex;
     position: fixed;
@@ -219,7 +190,6 @@ header.scrolled {
     transition: all 0.6s ease;
     border: none;
     box-shadow: none;
-    
 }
 
 header.scrolled .logo {
@@ -384,11 +354,6 @@ header.scrolled nav a {
     border-radius: 2vw;
 }
 
-
-
-
-
-/* Provided CSS (unchanged) */
 #game-container {
 
     position: relative;
@@ -412,12 +377,10 @@ header.scrolled nav a {
     width: 50px;
     height: 2vw;
     background-image: url('nonsss.gif');
-    /* Replace with your monster image URL */
     background-size: cover;
     background-repeat: no-repeat;
     cursor: pointer;
     transition: transform 0.2s;
-
 }
 
 .monster:hover {
@@ -427,7 +390,6 @@ header.scrolled nav a {
 }
 
 .explosion {
-
     position: absolute;
     width: 100px;
     height: 100px;
@@ -435,7 +397,6 @@ header.scrolled nav a {
     border-radius: 50%;
     animation: explode 0.5s ease-out;
     pointer-events: none;
-
 }
 
 @keyframes explode {
@@ -452,9 +413,7 @@ header.scrolled nav a {
 
 }
 
-/* Additional styles */
 #play-button {
-
     position: absolute;
     width: 0;
     height: 0;
@@ -464,7 +423,6 @@ header.scrolled nav a {
     left: 40%;
     transform: translate(-50%, -50%);
     transition: transform 0.3s ease;
-
 }
 
 #play-button:hover {
@@ -473,9 +431,7 @@ header.scrolled nav a {
 
 }
 
-
 #score {
-
     font-size: 0.8vw;
     color: white;
     position: absolute;
@@ -483,7 +439,6 @@ header.scrolled nav a {
     left: 1vw;
     z-index: 10;
     display: none;
-    /* Initially hidden */
 }
 
 .Stack {
@@ -500,7 +455,6 @@ header.scrolled nav a {
         1px 1px 0 #141414,
         2px 2px 0 #141414,
         0.2vw 0.2vw 0 #141414;
-
 }
 
 
@@ -509,7 +463,6 @@ header.scrolled nav a {
     transform: scale(1.02);
     overflow: hidden;
 }
-
 
 .progress-container {
 
@@ -530,7 +483,6 @@ header.scrolled nav a {
     height: 1vw;
     background-color: #181818;
     border-radius: 5px;
-
 }
 
 .progress-bar {
@@ -542,7 +494,6 @@ header.scrolled nav a {
     transition: width 50ms linear;
     position: relative;
     z-index: -0;
-
 }
 
 .milestone {
@@ -552,7 +503,6 @@ header.scrolled nav a {
     transform: translateX(-50%);
     opacity: 0;
     transition: opacity 0.5s ease;
-
 }
 
 .milestone-dot {
@@ -564,7 +514,6 @@ header.scrolled nav a {
     margin: 4.6vw 6vw 1vw;
     transition: background-color 1s ease;
     z-index: 100;
-
 }
 
 .milestone-text {
@@ -573,9 +522,6 @@ header.scrolled nav a {
     text-align: center;
     gap: 2px;
 }
-
-
-
 
 .milestone-titleA {
 
@@ -597,9 +543,6 @@ header.scrolled nav a {
 
 }
 
-
-
-
 .milestone.school {
 
     left: 20%;
@@ -618,7 +561,6 @@ header.scrolled nav a {
     color: #22211E;
 }
 
-/* Active state classes */
 .milestone.active {
     opacity: 1;
 }
@@ -663,7 +605,6 @@ header.scrolled nav a {
     gap: 1.5vw;
     padding: 3vw;
     padding-bottom: 0vw;
-    
 }
 
 .left-panel,
@@ -680,11 +621,9 @@ header.scrolled nav a {
     font-size: 1.7vw;
     line-height: 1.6;
     width: 25vw;
-    
 }
 
 #demi {
-
     margin-top: 1vh;
     font-size: 4.5vh;
     color: #fff;
@@ -693,15 +632,10 @@ header.scrolled nav a {
     width: 4.5vw;
     border-radius: 50px;
     transition: transform 0.6s ease;
-
-    /* Smooth transition for the hover effect */
 }
 
-/* Hover effect to rotate the button */
 #demi:hover {
-
     transform: rotate(360deg);
-    /* Rotate the button by 360 degrees */
 }
 
 
@@ -753,7 +687,7 @@ header.scrolled nav a {
 
 .con2 h1 {
     margin-right: 2vw;
-    width: 35vw;
+    width: 25vw;
     height: 6.5vw;
     justify-content: center;
     background-color: #131211;
@@ -916,7 +850,6 @@ header.scrolled nav a {
     cursor: default;
 }
 
-/* Footer Styles */
 footer {
     height: 40vw;
     width: 94%;
@@ -955,12 +888,9 @@ footer.show {
     }
 }
 
-
-/* Contact Header */
 .contact {
     font-size: 2vw;
     color: whitesmoke;
-    /* Font size for the header */
 }
 
 .find {
@@ -970,7 +900,6 @@ footer.show {
     color: whitesmoke;
 }
 
-/* Form Styles */
 #contactForm {
 
     padding: 2%;
@@ -979,14 +908,11 @@ footer.show {
     display: flex;
     flex-direction: column;
     margin-top: 2vw;
-
-    /* Elevated effect */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1),
         0 1px 0.2vw rgba(0, 0, 0, 0.08);
     transition: box-shadow 0.3s ease-in-out;
 }
 
-/* Optional: Add a hover effect to enhance the elevation when hovered */
 #contactForm:hover {
     box-shadow: 0 1vw 15px rgba(0, 0, 0, 0.2),
         0 4px 6px rgba(0, 0, 0, 0.1);
@@ -994,18 +920,9 @@ footer.show {
 
 
 #sheesh {
-
-    /* Max width for the form */
     width: 70%;
-    /* Make sure it fits in the footer */
-
-    /* Column layout for form fields */
     margin-top: -2vw;
-    /* Space above the form */
-
 }
-
-
 
 #twitterButton,
 #discordButton {
@@ -1036,19 +953,12 @@ footer.show {
     height: 100%;
     width: 90%;
     margin-left: 2vw;
-
     background-image: url('debil.png');
     background-size: contain;
-    /* Or 'cover', depending on your preference */
     background-position: center;
     background-repeat: no-repeat;
-
     border-radius: 2vw;
-    /* Adjust this value to change the roundness */
 }
-
-
-
 
 #devImg:hover {
     transform: scale(1.03);
@@ -1063,49 +973,34 @@ footer.show {
     display: none;
 }
 
-
-
 .form-group {
     margin-bottom: 15px;
-    /* Space between form groups */
     width: 100%;
-    /* Full width for form groups */
 }
 
 label {
     font-size: 1.2vw;
     margin-bottom: 5px;
-    /* Space below labels */
     font-weight: bold;
-    /* Bold labels */
     color: #2f2f2f;
-    /* Same color as social links */
 }
 
 input[type="text"],
 input[type="email"],
 textarea {
     width: 100%;
-    /* Full width for input fields */
     padding: 1vw;
-    /* Padding inside input fields */
     border: 1px solid #ccc;
-    /* Light border color */
     border-radius: 5px;
-    /* Rounded corners */
     font-size: 1.5vw;
-    /* Responsive font size */
     transition: border-color 0.3s;
-    /* Smooth border color change */
 }
 
 input[type="text"]:focus,
 input[type="email"]:focus,
 textarea:focus {
     border-color: #9c1e40;
-    /* Change border color on focus */
     outline: none;
-    /* Remove outline */
 }
 
 button {
@@ -1119,13 +1014,10 @@ button {
     transition: background-color 0.3s;
 }
 
-
 button:hover {
     background-color: #22211E;
-    /* Darker shade on hover */
 }
 
-/* Social Links Styles */
 .social-links {
     display: flex;
     flex-direction: column;
@@ -1134,28 +1026,20 @@ button:hover {
     align-items: flex-end;
 }
 
-
 .social-links a {
     margin-left: 2vw;
-    /* Space between social links */
     text-decoration: none;
-    /* Remove underline */
     color: #2f2f2f;
-    /* Same color as footer text */
     transition: color 0.3s ease;
-    /* Smooth color transition */
 }
 
 .social-links a:hover {
     color: #22211E;
-    /* Change color on hover */
 }
-
 
 #goli {
     display: flex;
     flex-direction: row;
-
 }
 
 #lastR {
@@ -1163,37 +1047,24 @@ button:hover {
     border: none;
 }
 
-
-
-
 .right-panel,
 .left-panel {
     opacity: 0;
-    /* Make them invisible initially */
     transform: translateX(-200px);
-    /* Shift them 100px to the left */
     transition: opacity 0.8s ease-out, transform 0.8s ease-in-out;
-    /* Smooth fade-in and move */
 }
 
 .right-panel1,
 .left-panel1 {
     opacity: 0;
-    /* Make them invisible initially */
     transform: translateX(+200px);
-    /* Shift them 100px to the left */
     transition: opacity 0.8s ease-out, transform 0.8s ease-in-out;
 
 }
-
-/* When the project comes into view, fade it in and move it to the normal position */
 .show {
-
     z-index: 100;
     opacity: 1;
-    /* Make them visible */
     transform: translateX(0);
-    /* Move them to their original position */
 }
 
 #bento {
@@ -1230,20 +1101,14 @@ button:hover {
     border-radius: 2vw;
     transition: background-color 0.6s ease;
 }
-
-
-/* General Box Styles */
 .box {
     display: flex;
     background-color: #181818;
     border-radius: 15px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
     transition: background-color 0.6s ease, box-shadow 0.6s ease;
-    /* Smooth transition for background and shadow */
 }
 
-
-/* Discount Box Styles */
 .discount-box {
     position: relative;
     grid-column: span 2;
@@ -1259,10 +1124,8 @@ button:hover {
     image-rendering: pixelated;
     overflow: hidden;
     transition: background-size 0.6s ease, transform 0.6s ease;
-    /* Smooth size and transform changes */
 }
 
-/* Pixelated Background Transition */
 .discount-box::after {
     content: '';
     position: absolute;
@@ -1270,11 +1133,9 @@ button:hover {
     left: 0;
     right: 0;
     bottom: 0;
-
     background-size: 100% 100%;
     opacity: 0;
     transition: opacity 0.6s ease, background-size 0.6s ease;
-    /* Smooth transition for pseudo-element */
     image-rendering: pixelated;
     z-index: 1;
 }
@@ -1287,10 +1148,8 @@ button:hover {
     position: relative;
     z-index: 2;
     transition: opacity 0.6s ease, transform 0.6s ease;
-    /* Smooth fade and size changes */
 }
 
-/* Pseudo-element for second image */
 .discount-box::before {
     content: '';
     position: absolute;
@@ -1305,7 +1164,6 @@ button:hover {
     background-position: center;
     opacity: 0;
     transition: opacity 0.6s ease;
-    /* Smooth fade-in for before pseudo-element */
     image-rendering: pixelated;
     z-index: 2;
 
@@ -1313,31 +1171,24 @@ button:hover {
 
 
 
-/* Hover Effects */
 #bento:hover .discount-box::after {
     opacity: 1;
-
     background-size: 100% 100%;
     transition: opacity 0.6s ease, background-size 0.6s ease;
     border: 2px solid royalblue;
-    /* Smooth transition for pseudo-element */
 }
 
 .discount-box:hover img {
     opacity: 0;
     transition: opacity 0.6s ease;
     border: 2px solid royalblue;
-    /* Smooth fade-out for image */
 }
 
 .discount-box::before {
-
     opacity: 1;
     transition: opacity 0.6s ease;
-    /* Smooth fade-in for before pseudo-element */
 }
 
-/* Font Box Styles */
 .font-box {
 
     font-size: 3vw;
@@ -1401,28 +1252,6 @@ button:hover {
     animation: moveBorder 5s linear infinite;
 }
 
-/* @keyframes moveBorder {
-    0% {
-        border-color: transparent;
-        box-shadow: none;
-    }
-    25% {
-        border-color: royalblue;
-        box-shadow: 0 0 10px royalblue;
-    }
-    50% {
-        border-color: transparent;
-        box-shadow: none;
-    }
-    75% {
-        border-color: whitesmoke;
-        box-shadow: 0 0 10px whitesmoke;
-    }
-    100% {
-        border-color: transparent;
-        box-shadow: none;
-    }
-} */
 .bottom-section {
     height: 10.6vw;
     width: 100%;
@@ -1484,7 +1313,6 @@ button:hover {
 .language-btn {
     width: 10vw;
     background-color: #101010;
-
     border-radius: 1vw;
     height: 2.5vw;
     padding: 0.8vw 1vw;
@@ -1496,7 +1324,6 @@ button:hover {
     position: relative;
     overflow: hidden;
     text-align: center;
-
 }
 
 .language-btn i {
@@ -1506,8 +1333,6 @@ button:hover {
     transform: translateX(160%);
     transition: transform 0.3s ease, color 0.3s ease;
     filter: invert(1);
-    /* Invert the image color (making it white initially) */
-
 }
 
 .language-btn span {
@@ -1516,41 +1341,16 @@ button:hover {
     letter-spacing: 0.5px;
     transition: opacity 0.3s ease, transform 0.3s ease;
     color: whitesmoke;
-    /* Initially set the text color to white */
 }
-
-/* body {
-    background: linear-gradient(-45deg, #22211E , royalblue);
-    background: linear-gradient(-45deg, #22211E, royalblue, #22211E, royalblue);
-    background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
-    height: 100vh;
-  }
-  
-  @keyframes gradient {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  } */
 
 .language-btn:hover i {
     color:rgb(207 195 40);
     transform: translateX(10%) rotate(360deg);
     filter: invert(1);
     transition: transform 0.3s ease-in-out;
-    
-    
-    /* Smooth rotation */
 }
 .language-btn:hover{
     border-bottom: 1px solid royalblue;
-    
 }
 
 .language-btn:hover span {
@@ -1558,8 +1358,6 @@ button:hover {
     opacity: 1;
     transform: translateX(0);
     color: white;
-    
-    /* Ensure the text color remains white on hover */
 }
 
 .language-btn:hover span #jsn {
@@ -1567,13 +1365,11 @@ button:hover {
     opacity: 1;
     transform: translateX(0);
     color: white;
-    /* Ensure the text color remains white on hover */
 }
 
 .clock {
     font-size: 2rem;
     margin-top: 1vw;
-
 }
 
 .timezone {
@@ -1583,34 +1379,26 @@ button:hover {
     align-items: center;
     gap: 0.3vw;
 }
-
 .timezone-text {
     font-weight: bold;
     color: whitesmoke;
     font-size: 1.1vw;
-
 }
 #img1{
     width: 100%;
     margin-left: 0vw;
     margin-right: 2vw;
 }
-
 #img2{
     width: 100%;
     margin-left: 0vw;
     margin-right: 2vw;
-    
 }
 #img3{
     width: 100%;
     margin-left: 2vw;
     margin-right: 2vw;
-   
 }
-
-
-
 
 .timezone-icon {
     display: inline-block;
@@ -1633,7 +1421,6 @@ button:hover {
 }
 
 .font-box span {
-
     height: 100%;
     font-size: 1.8vw;
     display: inline-block;
@@ -1655,17 +1442,14 @@ button:hover {
 }
 
 .font-box .gticon {
-
     width: 2.9vw;
     height: 3.5vw;
     margin-left: 0vw;
     margin-bottom: 13vw;
-
     filter: invert(1);
 }
 
 .font-box i {
-
     text-decoration: none;
     font-size: 2vw;
     margin-bottom: 13.5vw;
@@ -1673,16 +1457,12 @@ button:hover {
     color: whitesmoke;
     transform: translate(0, 0) rotate(-45deg);
     position: relative;
-
 }
-
-
 
 @keyframes diagonalMove {
     0% {
         transform: translate(0, 0) rotate(-70deg);
     }
-
     100% {
         transform: translate(0, 0) rotate(-20deg);
     }
@@ -1694,36 +1474,28 @@ button:hover {
 
 .font-box:hover {
     color: #f2e9da;
-    /* Light color from existing scheme */
     background-color: black;
-    /* Dark color from existing scheme */
     transition: all 0.6s ease;
     box-shadow: 0 0 2vw rgba(34, 33, 30, 0.3);
-    /* Subtle shadow effect */
     border: 1.5px solid royalblue;
-
 }
 
 .font-box:hover i {
     animation: diagonalMove 2s infinite alternate;
-
 }
 
 
-/* Enhanced Font Box Animation */
 @keyframes fall-and-rise {
     0% {
         transform: translate3d(100%, -10%, 0) scale(0.6);
         opacity: 0;
     }
-
     20%,
     80% {
         transform: translate3d(0, 0, 0) scale(1);
         opacity: 1;
 
     }
-
     100% {
         transform: translate3d(-100%, 10%, 0) scale(0.6);
         opacity: 0;
@@ -1734,7 +1506,6 @@ button:hover {
     font-size: 2.1vw;
     margin-top: 1vw;
     color: whitesmoke;
-
 }
 
 #lastkill{
@@ -1745,16 +1516,11 @@ button:hover {
     background-color: #22211E;   
 }
 
-
-
-/* Fade-In Effect */
 .fade-in {
     opacity: 0;
     transition: opacity 1s ease-in-out;
-    /* Smooth fade-in effect */
 }
 
-/* State of the element when it becomes active (visible) */
 .fade-in.active {
     opacity: 1;
 }
@@ -1781,7 +1547,6 @@ button:hover {
 }
 
 .slider {
-    
     display: flex;
     transition: transform 0.5s ease-in-out;
 }
@@ -1842,7 +1607,6 @@ button:hover {
 }
 
 .description {
-
     padding: 0 2vw;
     font-size: 1.45vw;
     color: #22211E;
@@ -1893,12 +1657,9 @@ button:hover {
 }
 
 .bottle-box:hover .slide-text {
-
     text-decoration: underline;
     font-size: 2vw;
     padding: 0.5vw;
-
-
 }
 
 .bottle-box #a {
@@ -1906,8 +1667,6 @@ button:hover {
     margin-top: 0.3vw;
     font-size: 1.5vw;
     margin-left: 13vw;
-    
-
 }
 
 .bottle-box #b {
@@ -1923,7 +1682,6 @@ button:hover {
     font-size: 1.5vw;
     margin-left: 13vw;
 }
-
 
 .bottle-box:hover #d {
     width: 100%;
@@ -1957,21 +1715,16 @@ button:hover {
     color: white;
 }
 
-
 .sign-box {
     grid-column: span 5;
     grid-row: span 1;
     height: 12vw;
-  
-    /* Added to ensure consistency */
     width: 100%;
-    
     overflow: hidden;
     border-radius: 1vw;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     position: relative;
     background-color: #1e1e1e;
-    /* Ensure a dark background */
     color: #fff;
     display: flex;
     justify-content: left;
@@ -2002,11 +1755,9 @@ button:hover {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    /* Align items to the left */
     padding: 1vw;
     padding-top: 0vw;
     text-align: left;
-    /* Align text to the left */
 }
 
 .skill-number {
@@ -2030,16 +1781,12 @@ button:hover {
     color: #bfbfbf;
 }
 
-/* Add hover effect for the container */
 .sign-box:hover {
     transform: scale(1.03);
     transition: transform 0.6s ease-in-out, box-shadow 0.6s ease-in-out;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border: 1.5px solid royalblue;
-
 }
-
-
 
 .line-box {
     padding: 1vw;
@@ -2050,9 +1797,7 @@ button:hover {
     text-align: left;
     overflow: hidden;
     border-radius: 15px;
-    /* Slightly rounded corners */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-    /* Enhanced shadow for depth */
     position: relative;
     display: flex;
     flex-direction: column;
@@ -2075,26 +1820,19 @@ button:hover {
     transition: transform 0.5s;
 }
 
-
 .inter {
     position: relative;
     z-index: 1;
-    /* Ensures content is above any background elements */
 }
 
 .inter h3 {
     position: absolute;
     top: 0.5vw;
-    /* Adjusted spacing for better alignment */
     left: 0.5vw;
-    /* Title placed at the top left */
     font-size: 1.1vw;
-    /* Adjusted font size for better visibility */
     font-weight: bold;
     color: royalblue;
-    /* Darker text for contrast */
     letter-spacing: 1px;
-    /* Slightly increased letter spacing for clarity */
     margin: 0;
 }
 
@@ -2102,43 +1840,30 @@ button:hover {
     margin-left: 0.5vw;
     margin-top: 4vw;
     font-size: 1.3vw;
-    /* Slightly smaller font size for description */
     color: whitesmoke;
-    /* Soft color for description */
     line-height: 1.6;
-    /* Improved line height for better readability */
 }
 
 .inter a {
-
-
     height: 2.2vw;
     width: 2.2vw;
     position: absolute;
     top: 8vw;
     right: 0vw;
-    /* Adjusted right spacing */
     display: flex;
     display: none;
     align-items: center;
     justify-content: center;
     background-color: #22211E;
-    /* Dark background for the arrow icon */
     padding: 1vw;
-    /* Increased padding for the button */
     border-radius: 50%;
-    /* Round button around the arrow */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    /* Slight shadow around the button */
     transition: background-color 0.3s, transform 0.2s;
-    /* Smooth transitions */
 }
 
 .inter a:hover {
     background-color: #555;
-    /* Lighter shade on hover */
     transform: scale(1.1);
-    /* Slight zoom effect on hover */
 }
 
 .line-box:hover img {
@@ -2151,20 +1876,10 @@ button:hover {
 }
 
 .inter a i {
-
     rotate: 30deg;
     font-size: 1.2vw;
-    /* Adjust the font size as needed */
     color: white;
-    /* White color for the arrow */
 }
-
-
-
-
-
-
-
 
 .phone-box {
     height: 12vw;
@@ -2175,9 +1890,7 @@ button:hover {
     justify-content: center;
     align-items: center;
     background-color: #1E1E1E;
-
 }
-
 
 .phone-box:hover {
 
@@ -2194,11 +1907,9 @@ button:hover {
     justify-content: center;
     align-items: center;
     position: relative;
-
     background-color: #1E1E1E;
     border-radius: 1vw;
 }
-
 
 .logo-box:hover {
     transform: scale(1.05);
@@ -2208,7 +1919,6 @@ button:hover {
 .logo-box a {
     text-decoration: none;
 }
-
 
 .content-wrapper {
     display: flex;
@@ -2220,8 +1930,6 @@ button:hover {
     z-index: 2;
     transition: all 0.5s ease;
 }
-
-
 
 .logo {
     font-size: 2.5vw;
@@ -2235,7 +1943,6 @@ button:hover {
 }
 
 .status-text {
-
     font-size: 1.5vw;
     color: whitesmoke;
     text-align: center;
@@ -2245,7 +1952,6 @@ button:hover {
     text-shadow: 0 2px 4px royalblue, 0 0 2px royalblue, 0 0 2px royalblue, 1px 1px 0 royalblue, 2px 2px 0 royalblue, 0.2vw 0.2vw 0 royalblue;
 }
 
-/* Replace background with iframe for LeetCode */
 .background {
     position: absolute;
     top: 0;
@@ -2267,29 +1973,20 @@ button:hover {
     border: none;
 }
 
-/* On hover, shrink and move the logo */
 .logo-box:hover .logo {
     opacity: 0;
     color: whitesmoke;
     transform: translateY(2vw)
 }
 
-/* On hover, fade in and slide in the text */
 .logo-box:hover .status-text {
     opacity: 0;
-    /* Fade in the text */
     transform: translateY(2vw);
-    /* Slide in the text from below */
 }
 
-/* On hover, enhance the background blur */
 .logo-box:hover .background {
     opacity: 1;
-    /* Enhance the background */
 }
-
-
-
 
 .banner-box {
     display: block;
@@ -2335,62 +2032,43 @@ button:hover {
     0%,
     50% {
         color: #FFF;
-        /* White text */
         text-shadow:
             1px 1px 0 royalblue,
             2px 2px 0 royalblue,
             0.2vw 0.2vw 0 royalblue;
-        /* Black shadow */
     }
-
     51%,
     100% {
         color: royalblue;
-        /* Black text */
         text-shadow:
             1px 1px 0 #FFF,
             2px 2px 0 #FFF,
             0.2vw 0.2vw 0 #FFF;
-        /* White shadow */
     }
 }
 
 @keyframes retroColor {
-
     0%,
     100% {
         color: whitesmoke;
-        /* White text */
         text-shadow:
             1px 1px 0 royalblue,
             2px 2px 0 royalblue,
             0.2vw 0.2vw 0 royalblue;
-        /* Black shadow */
     }
-
 }
-
-
-
-
-
 .ad-box {
     grid-column: span 4;
     grid-row: span 0;
 }
-
-
 .form-group {
     margin-bottom: 15px;
     width: 100%;
-    /* Full width for form groups */
 }
-
 label {
     font-size: 1.2vw;
     font-weight: bold;
     color: whitesmoke;
-
 }
 
 input[type="text"],
@@ -2417,19 +2095,14 @@ textarea {
     100% { color: whitesmoke; }
 }
 
-
-
-
 input[type="text"]:focus,
 input[type="email"]:focus,
 textarea:focus {
     border-color: #22211E;
     outline: none;
-
 }
 
 button {
-
     padding: 1vw;
     background-color: #22211E;
     border: none;
@@ -2441,7 +2114,6 @@ button {
     display: inline-block;
 }
 
-
 button i,
 button img {
     font-size: 2vw;
@@ -2449,65 +2121,49 @@ button img {
 }
 
 button:hover {
-
     background-color: #22211E;
 }
 
 button:hover i,
 button:hover img {
-
     transform: rotate(360deg);
 }
 
-
-
 .social-links {
-
     margin-top: 2vw;
-
 }
 
 .social-links a {
-
     margin-left: 2vw;
     text-decoration: none;
     color: #2f2f2f;
     transition: color 0.3s ease;
-
 }
 
 .social-links a:hover {
-
     color: #22211E;
-
 }
 
 .music-icon {
-
     z-index: 200;
     position: fixed;
     bottom: 1.5vw;
     left: 1.5vw;
     padding: 0.5vw;
     background-color: royalblue;
-
     border-radius: 50%;
     animation: rotate 10s linear infinite;
     display: inline;
     cursor: pointer;
-
 }
 
 .music-icon img {
-
     height: 1.5vw;
     filter: invert(1);
     width: 1.75vw;
-
 }
 
 .close-overlay {
-
     position: absolute;
     bottom: -0.2vw;
     right: -0.3vw;
@@ -2521,7 +2177,6 @@ button:hover img {
     line-height: 1.5vw;
     display: none;
     cursor: pointer;
-
 }
 
 .hero #resume{
@@ -2532,17 +2187,14 @@ button:hover img {
     width: 25vw;
 }
 
-
 .music-icon.clicked .close-overlay {
     display: block;
-    /* Show the close button when clicked */
 }
 
 @keyframes rotate {
     from {
         transform: rotate(0deg);
     }
-
     to {
         transform: rotate(360deg);
     }
@@ -2551,38 +2203,26 @@ button:hover img {
 .right-panel,
 .left-panel {
     opacity: 0;
-    /* Make them invisible initially */
     transform: translateX(-200px);
-    /* Shift them 100px to the left */
     transition: opacity 0.8s ease-out, transform 0.8s ease-in-out;
-    /* Smooth fade-in and move */
 }
 
 .right-panel1,
 .left-panel1 {
     opacity: 0;
-    /* Make them invisible initially */
     transform: translateX(+200px);
-    /* Shift them 100px to the left */
     transition: opacity 0.8s ease-out, transform 0.8s ease-in-out;
-
 }
 
-/* When the project comes into view, fade it in and move it to the normal position */
 .show {
-
     z-index: 100;
     opacity: 1;
-    /* Make them visible */
     transform: translateX(0);
-    /* Move them to their original position */
 }
 
 #bento .box:hover {
     background-color: black;
 }
-
-/* mediaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaA */
 
 @media (max-width: 768px) {
 
@@ -2590,7 +2230,6 @@ button:hover img {
     body{
             padding: 1vw;
     }
-
     .container,
     .containerABT {
         grid-template-columns: 1fr;
@@ -2646,7 +2285,6 @@ button:hover img {
         font-size: 2vw;
     }
 
-
     .hero p {
         font-size: 4.2vw;
         font-weight: 300;
@@ -2670,7 +2308,6 @@ button:hover img {
         margin-left: 8vw;
     }
 
-
     .con{
         height: 10vw;
         width: 95%;
@@ -2684,7 +2321,6 @@ button:hover img {
     .Proj{
         font-size: 5vw;
     }
-
     
     .hero {
         height: 145vw;
@@ -2741,7 +2377,6 @@ button img {
         font-size: 3.5vw;
         
     }
-    
 
     #bento {
         height: 100vw;
@@ -2756,7 +2391,6 @@ button img {
         border-radius: 2vw;
         transition: background-color 0.6s ease;
     }
-
 
 input[type="text"],
 input[type="email"],
@@ -2773,9 +2407,6 @@ textarea {
     background-color: #1E1E1E;
     animation: textColorChange 5s infinite;
 }
-
-
-
     .container {
         height: 150vw;
         max-width: 95vw;
@@ -2870,8 +2501,6 @@ textarea {
     font-size: 2vw;
 }
 
-
-
 .Stack {
     
     width: 100%;
@@ -2915,7 +2544,6 @@ textarea {
     transform: translateX(14vw) rotate(360deg);
     filter: invert(1);
     transition: transform 0.3s ease-in-out;
-    /* Smooth rotation */
 }
 
 .language-btn span {
@@ -2926,7 +2554,6 @@ textarea {
     letter-spacing: 0.5px;
     transition: opacity 0.3s ease, transform 0.3s ease;
     color: whitesmoke;
-    /* Initially set the text color to white */
 }
 
 .language-btn {
@@ -2948,23 +2575,17 @@ textarea {
 
 }
 
-
-
-
 .discount-box {
-  
     height: 28vw;
     width: 125%;
     padding: -1vw;
     border-radius: 1vw;
 }
 .font-box {
-
     margin-left: 3vw;
     height: 28vw;
     width: 124%;
     border-radius: 1vw;
-    
 }
 
 .font-box .gticon {
@@ -3025,7 +2646,6 @@ textarea {
 }
 
 .timezone-icon {
-    
     width: 3vw;
     margin-bottom: 0vw;
     height: 3vw;
@@ -3035,7 +2655,6 @@ textarea {
   
     margin-top: 3vw;
 }
-
 .font-box span {
     height: 100%;
     font-size: 2.8vw;
@@ -3043,14 +2662,11 @@ textarea {
     padding-top: 16vw;
     margin-left: -2vw;
 }
-
 .timezone-text{
     margin-top:1vw;
     font-size: 1.5vw;
     text-align: center;
-
 }
-
 .bottle-box {
     height: 42vw;
     margin-top: -3vw;
@@ -3058,7 +2674,6 @@ textarea {
     width: 59vw;
     grid-column: span 7;
 }
-
 .banner-box {
     height: 20vw;
     width: 19.2vw;
@@ -3066,7 +2681,6 @@ textarea {
     border-radius: 1vw;
     margin-top: -1vw;
 }
-
 .line-box {
     padding: 1vw;
     width: 27vw;
@@ -3077,7 +2691,6 @@ textarea {
     grid-column: span 1;
     margin-top: -3vw;
 }
-
 .logo-box {
     margin-top: -14vw;
     margin-left: 23.5vw;
@@ -3085,25 +2698,20 @@ textarea {
     border-radius: 1vw;
     height: 33vw;
 }
-
-
 .inter h3{
     font-size: 5vw;
     
 }
-
 .inter p{
     margin-top: 7vw;
     font-size: 1.9vw;
 }
-
 .line-box img {
     margin-top: 13.2vw;
     margin-left: 7.1vw;
     width: 80%;
     height: 41%;
 }
-
 .slide-image {
     width: 100%;
     height: 35.5vw;
@@ -3115,39 +2723,11 @@ textarea {
     transition: all 0.6s ease;
     animation: border-rotate 3s linear infinite;
 }
-
 .bottle-box:hover .slide-image{
     height: 25vw;
     width: 90%;
     
 }
-/* #img1{
-    width: 130%;
-    margin-left: 20vw;
-    margin-right: 10vw;
-}
-
-#img2{
-    width: 160%;
-    margin-left: -5vw;
-    margin-right: 3vw;
-}
-#img3{
-    width: 80%;
-    margin-right: 86vw;
-} */
-
-
-/* #e{
-    width: 80%;
-    margin-left: -20vw;
-} */
-
-
-
-
-
-
 #cont{
     font-size: 5vw;
     margin-left: 1vw;
@@ -3161,7 +2741,6 @@ textarea {
     margin-left: 2vw;
     background-color: #22211E;
 }
-
 #goli {
     display: flex;
     flex-direction: column;
@@ -3178,12 +2757,10 @@ label {
     font-weight: bold;
     color: whitesmoke;
 }
-
 #sheesh {
     width: 100%;
     margin-top: 2vw;
 }
-
 #twitterButton, #discordButton {
     margin-top: 0vw;
     height: 10vw;
@@ -3193,13 +2770,11 @@ label {
     padding: 2vw;
     margin-left: 2vw;
 }
-
 #lastbutton {
     margin-top: 3vw;
     display: flex;
     justify-content: flex-start;
     margin-left: 2.2vw;
-    
 }
 .form-group {
     margin-bottom: 1.2vw;
@@ -3216,7 +2791,6 @@ header{
 header.scrolled {
     display: none;
 }
-
 
 #leetcodeButton {
     
@@ -3241,9 +2815,7 @@ header.scrolled {
     width: 3vw;
 }
 
-
 button {
-
     padding: 2vw;
     background-color: #22211E;
     border: none;
