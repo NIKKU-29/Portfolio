@@ -113,9 +113,101 @@ const footerObserver = new IntersectionObserver((entries, observer) => {
 // Start observing the footer
 footerObserver.observe(footer);
 
+document.addEventListener('DOMContentLoaded', function() {
+    const slider = document.querySelector('.expertise-slider');
+    const containers = document.querySelectorAll('.con1, .con2');
+    
+    if (!slider || !containers.length) return;
 
+    let currentTranslate = 0;
+    let isScrolling = false;
+    let scrollTimeout;
+    let autoMovePosition = 0;
+    let lastTime = performance.now();
 
+    // Smooth scroll function using lerp
+    function lerp(start, end, factor) {
+        return start + (end - start) * factor;
+    }
 
+    // Automatic movement animation
+    function autoMove(currentTime) {
+        const deltaTime = currentTime - lastTime;
+        lastTime = currentTime;
+
+        if (!isScrolling) {
+            // Move automatically when not scrolling
+            autoMovePosition += deltaTime * 0.001; // Adjust speed by changing this multiplier
+            if (autoMovePosition >= 100) autoMovePosition = 0;
+
+            containers.forEach(container => {
+                container.style.transform = `translateX(${-autoMovePosition}%)`;
+            });
+        }
+
+        requestAnimationFrame(autoMove);
+    }
+
+    // Start automatic movement
+    requestAnimationFrame(autoMove);
+
+    // Handle scroll events
+    window.addEventListener('scroll', function() {
+        // Show slider when in view
+        const sliderPosition = slider.getBoundingClientRect().top;
+        const screenPosition = window.innerHeight / 1.3;
+        
+        if(sliderPosition < screenPosition) {
+            slider.classList.add('show');
+        }
+
+        // Calculate scroll direction and amount
+        const scrollPercent = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight);
+        const targetTranslate = scrollPercent * 100;
+
+        isScrolling = true;
+        clearTimeout(scrollTimeout);
+
+        // Update auto-move position to match current scroll position
+        autoMovePosition = targetTranslate;
+
+        // Set a timeout to detect when scrolling stops
+        scrollTimeout = setTimeout(() => {
+            isScrolling = false;
+        }, 150);
+
+        // Animate the translation during scroll
+        function updatePosition() {
+            if (!isScrolling) return;
+
+            currentTranslate = lerp(currentTranslate, targetTranslate, 0.1);
+
+            containers.forEach(container => {
+                container.style.transform = `translateX(${-currentTranslate}%)`;
+            });
+
+            if (isScrolling) {
+                requestAnimationFrame(updatePosition);
+            }
+        }
+
+        requestAnimationFrame(updatePosition);
+    });
+
+    // Handle hover pause
+    containers.forEach(container => {
+        container.addEventListener('mouseenter', () => {
+            isScrolling = true;
+        });
+
+        container.addEventListener('mouseleave', () => {
+            isScrolling = false;
+        });
+    });
+});
+
+   
+ 
 
 const sliderWrapper = document.querySelector('.slider-wrapper');
 
@@ -343,8 +435,6 @@ function moveToNextSlide() {
     if (cSlide == 3) cSlide = 0;
     sliderTrack.style.transform = `translateY(-${cSlide * 100}%)`;
 }
-
-// Automatically move to the next slide every 3 seconds
 setInterval(moveToNextSlide, 3000);
 
 
@@ -417,4 +507,4 @@ showSlide(currentSlide);
 // Auto-advance slides
 setInterval(() => {
     showSlide(currentSlide + 1);
-}, 8000);
+}, 3000);

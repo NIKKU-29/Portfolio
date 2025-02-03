@@ -29,9 +29,9 @@ body {
     
     position: relative;
     background-color: #1a1a1a;
-    background: linear-gradient(-45deg, #1a1a1a, #333333, #1a1a1a, #4d4d4d);
+    /* background: linear-gradient(-45deg, #1a1a1a, #333333, #1a1a1a, #4d4d4d);
     background-size: 300% 300%;
-    animation: gradient 8s ease-in-out infinite;
+    animation: gradient 8s ease-in-out infinite; */
 }
 
 @keyframes gradient {
@@ -103,7 +103,6 @@ body::after {
 .con {
     padding: 2vw;
     background-color: #131211;
-    max-width: 1600px;
     height: 7vw;
     margin: 100px auto 1vw;
     display: grid;
@@ -117,11 +116,11 @@ body::after {
     padding: 2vw;
     background-color: #131211;
     max-width: 88vw;
-    height: 122vw;
+    height: auto;
     margin: 1vw auto 1vw;
     display: grid;
     grid-template-columns: 1fr 1.8fr;
-    gap: 2vw;
+    gap: 0vw;
     border-radius: 1vw;
     overflow: hidden;
 }
@@ -308,7 +307,7 @@ header.scrolled nav a {
 }
 
 .hero h1 {
-    font-size: 2.5rem;
+    font-size: 2vw;
     margin-bottom: 2vh;
     color: royalblue;
 }
@@ -344,7 +343,7 @@ header.scrolled nav a {
 
 .hero button img {
 
-    height: 40px;
+    height: 2.5vw;
     width: auto;
     margin-left: 1vw;
     margin-top: 0.3vw;
@@ -365,7 +364,7 @@ header.scrolled nav a {
 .hero button:hover {
 
     color: whitesmoke;
-    transform: translateY(-1vw);
+    transform: scale(1.1);
     box-shadow: none;
     cursor: default;
     background-color: royalblue;
@@ -507,10 +506,10 @@ header.scrolled nav a {
     position: absolute;
     width: 0;
     height: 0;
-
+    font-size: 2.5vw;
     cursor: pointer;
-    top: 43%;
-    left: 43%;
+    top:40%;
+    left: 40%;
     transform: translate(-50%, -50%);
     transition: transform 0.3s ease;
 
@@ -564,11 +563,11 @@ header.scrolled nav a {
 
     background-color: #1E1E1E;
     border-radius: 2vw;
-    height: 110%;
+    height: 8.5vw;
     margin-top: 1.5vw;
     width: 96%;
     position: relative;
-    padding: 30px 0;
+    padding: 2.2vw 0;
     z-index: 50;
 
 }
@@ -597,7 +596,7 @@ header.scrolled nav a {
 .milestone {
 
     position: absolute;
-    top: -37px;
+    top: -2.9vw;
     transform: translateX(-50%);
     opacity: 0;
     transition: opacity 0.5s ease;
@@ -606,11 +605,11 @@ header.scrolled nav a {
 
 .milestone-dot {
 
-    width: 24px;
-    height: 24px;
+    width: 2vw;
+    height: 2vw;
     background-color: #e0e0e0;
     border-radius: 50%;
-    margin: 60px 100px 12px;
+    margin: 4.6vw 6vw 1vw;
     transition: background-color 1s ease;
     z-index: 100;
 
@@ -705,28 +704,31 @@ header.scrolled nav a {
 
 .right-panel,
 .right-panel1 {
-
     border-radius: 2vw;
     display: flex;
     flex-direction: column;
-    margin-top: 30px;
-    gap: 40px;
-    padding: 40px;
+    margin-top: 1vw;
+    gap: 1.5vw;
+    padding: 3vw;
+    padding-bottom: 0vw;
+    
 }
 
 .left-panel,
 .left-panel1 {
-    height: 12vw;
-    margin-top: 11vw;
-    margin-right: 50px;
+    height: 8vw;
+    margin-top: 7vw;
+    margin-right: 3vw;
     border-radius: 2vw;
 }
 
 #dataproj {
 
     color: whitesmoke;
-    font-size: 3vh;
+    font-size: 1.5vw;
     line-height: 1.6;
+    width: 25vw;
+    
 }
 
 #demi {
@@ -751,57 +753,88 @@ header.scrolled nav a {
 }
 
 
-
 .expertise-slider {
-    display: none;
+    min-height: 23vw;
+    width: 100%;
+    padding-top: 5vw;
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
+.expertise-slider.show {
+    opacity: 1;
+    transform: translateY(0);
+}
 
+.con1, .con2 {
+    display: flex;
+    width: fit-content;
+    margin-right: 20px;
+    will-change: transform;
+    transition: transform 1s ease-out;
+}
 
-
-
-.slide {
-
-    display: inline-block;
-    /* Display slides inline */
-    width: 140px;
-    /* Set a fixed width for slides */
-    margin: 0 50px;
-    /* Margin between slides */
+.con1 h1 {
+    margin-right: 2vw;
+    width: 35vw;
+    height: 8vw;
+    background-color: #1E1E1E;
+    padding: 2vw;
+    margin-bottom: 0.5vw;
+    margin-top: 0.5vw;
+    border: 0.15vw solid royalblue;
+    border-radius: 5vw;
+    font-size: 5vw;
+    color: rgba(255, 255, 255, 0.938);
     text-align: center;
-    /* Center the content */
-    font-size: 1.3rem;
-    font-weight: 600;
-    /* Font size for the text */
-    color: #22211E;
-    /* Text color */
+    box-shadow: 0 0 15px rgba(65, 105, 225, 0.3),
+                0 0 30px rgba(65, 105, 225, 0.2);
+    animation: glow 2s infinite alternate;
+    white-space: nowrap;
+    transform: scale(0.95);
+    transition: transform 0.3s ease;
 }
 
-@keyframes slide {
-    0% {
-        transform: translateX(0);
+.con2 h1 {
+    margin-right: 2vw;
+    width: 35vw;
+    height: 6.5vw;
+    justify-content: center;
+    background-color: #1E1E1E;
+    padding: 2vw;
+    border: 0.15vw solid royalblue;
+    border-radius: 5vw;
+    font-size: 3.5vw;
+    color: rgba(255, 255, 255, 0.938);
+    text-align: center;
+    box-shadow: 0 0 15px rgba(65, 105, 225, 0.3),
+                0 0 30px rgba(65, 105, 225, 0.2);
+    animation: glow 2s infinite alternate;
+    white-space: nowrap;
+    transform: scale(0.95);
+    transition: transform 0.3s ease;
+}
+
+.expertise-slider.show .con1 h1:hover,
+.expertise-slider.show .con2 h1:hover {
+    transform: scale(1.03);
+    background: linear-gradient(to right, royalblue, skyblue);
+}
+
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 15px rgba(65, 105, 225, 0.3),
+                    0 0 30px rgba(65, 105, 225, 0.2);
     }
-
-    /* Start position */
-    100% {
-        transform: translateX(-50%);
+    to {
+        box-shadow: 0 0 20px rgba(65, 105, 225, 0.5),
+                    0 0 40px rgba(65, 105, 225, 0.3);
     }
-
-    /* End position, adjust to translate half of the slides */
 }
-
-/* Adjust icon size if needed */
-.slide i {
-    display: block;
-    /* Block for proper spacing */
-    margin-bottom: 1vw;
-    /* Space between icon and text */
-    font-size: 3cqw;
-    /* Adjust icon size */
-}
-
-
-
 
 .event-link {
     font-size: 3.5rem;
@@ -826,7 +859,7 @@ header.scrolled nav a {
 
 .dynamic-text {
     color: #22211E;
-    font-size: 4rem;
+    font-size: 5.5vw;
     position: relative;
     opacity: 0;
     transform: translateY(30px);
@@ -1014,7 +1047,7 @@ footer.show {
     /* Make sure it fits in the footer */
 
     /* Column layout for form fields */
-    margin-top: 2vw;
+    margin-top: -2vw;
     /* Space above the form */
 
 }
@@ -1504,7 +1537,7 @@ button:hover {
 
     border-radius: 1vw;
     height: 2.5vw;
-    padding: 8px 16px;
+    padding: 0.8vw 1vw;
     display: flex;
     align-items: center;
     font-size: 1.3vw;
@@ -1519,7 +1552,7 @@ button:hover {
 .language-btn i {
     width: 2vw;
     font-size: 1.5vw;
-    margin-right: 8px;
+    margin-right: 0.5vw;
     transform: translateX(160%);
     transition: transform 0.3s ease, color 0.3s ease;
     filter: invert(1);
@@ -1609,19 +1642,22 @@ button:hover {
 
 }
 #img1{
+    width: 100%;
     margin-left: 0vw;
-    margin-right: 1.3vw;
+    margin-right: 2vw;
 }
 
 #img2{
-    width: 90%;
-    margin-left: 6vw;
-    margin-right: 22vw;
+    width: 100%;
+    margin-left: 0vw;
+    margin-right: 2vw;
+    
 }
 #img3{
-    width: 90%;
+    width: 100%;
     margin-left: 2vw;
-    margin-right: 29vw;
+    margin-right: 2vw;
+   
 }
 
 
@@ -1815,39 +1851,36 @@ button:hover {
 }
 
 .slide-image {
-    margin-right: 6vw;
-    width: 105%;
+    display: block;
+    width: 100%;
     height: 22vw;
     padding: 1vw;
-    margin-right: 0vw;
     background-size: cover;
     border-radius: 1vw;
-    border: 0.3vw solid;
-    border-image: linear-gradient(to right, royalblue, whitesmoke) 1;
+    position: relative;
+    overflow: hidden;
     transition: all 0.6s ease;
+    padding: 2vw;
+}
+
+.slide-image::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border: 0.3vw solid transparent;
+    border-radius: 1vw;
+    background: linear-gradient(to right, royalblue, whitesmoke) border-box;
+    -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
     animation: border-rotate 3s linear infinite;
+    margin-right: 0vw;
 }
 
 @keyframes border-rotate {
-    0% {
-        border-image-source: linear-gradient(to left, royalblue, whitesmoke);
-    }
-
-    25% {
-        border-image-source: linear-gradient(to top, royalblue, whitesmoke);
-    }
-
-    50% {
-        border-image-source: linear-gradient(to right, royalblue, whitesmoke);
-    }
-
-    75% {
-        border-image-source: linear-gradient(to bottom, royalblue, whitesmoke);
-    }
-
-    100% {
-        border-image-source: linear-gradient(to left, royalblue, whitesmoke);
-    }
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(0deg); }
 }
 
 .slide-text {
@@ -1856,7 +1889,7 @@ button:hover {
     color: whitesmoke;
     text-align: center;
     transition: all 0.6s ease;
-    margin-right: 0vw;
+    margin-right: 5vw;
 }
 
 .description {
@@ -1868,7 +1901,7 @@ button:hover {
     transition: all 0.6s ease;
     text-align: right;
     max-width: 100%;
-    margin-right: 2vw;
+    margin-right: 5vw;
 }
 
 
@@ -1878,25 +1911,34 @@ button:hover {
     border: 1.5px solid royalblue;
 }
 
+.bottle-box {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.6s ease;
+}
+
+.bottle-box::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(45deg, rgba(65, 105, 225, 0.1), rgba(255, 255, 255, 0.1));
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+
+.bottle-box:hover {
+    background-color: #030303;
+    transform: scale(1.02);
+}
+
+.bottle-box:hover::before {
+    opacity: 1;
+}
+
 .bottle-box:hover .slide-text {
     color: royalblue;
-    border-image: linear-gradient(to right, royalblue, whitesmoke) 1;
-
+    text-shadow: 0 0 8px rgba(65, 105, 225, 0.5);
 }
-
-
-/* Hover Effects */
-.bottle-box:hover {
-    transform: scale(1.05);
-    transition: all 0.6s ease;
-    border: 1.5px solid royalblue;
-}
-
-.bottle-box:hover .content-wrapper {
-    transform: scale(0.95);
-    /* Reduce scale effect */
-}
-
 .bottle-box:hover .slide-image {
     height: 15vw;
 }
@@ -1920,17 +1962,17 @@ button:hover {
 }
 
 .bottle-box #b {
+    width:100%;
     margin-top: 0.3vw;
-    font-size: 1.8vw;
-    margin-left: -13.2vw;
-
+    font-size: 1.5vw;
+    margin-left: 10vw;
 }
 
 .bottle-box #c {
+    width:100%;
     margin-top: 0.3vw;
-    font-size: 1.7vw;
-    margin-left: -17.5vw;
-
+    font-size: 1.5vw;
+    margin-left: 13vw;
 }
 
 
@@ -1945,10 +1987,10 @@ button:hover {
 }
 
 .bottle-box:hover #e {
-    width: 70%;
+    width: 100%;
     font-size: 1.2vw;
     opacity: 1;
-    margin-left: -14vw;
+    margin-left: 2vw;
     margin-top: 0.3vw;
     letter-spacing: 0.3px;
     transform: translateY(0);
@@ -1956,10 +1998,10 @@ button:hover {
 }
 
 .bottle-box:hover #f {
-    width: 70%;
+    width: 100%;
     opacity: 1;
     font-size: 1.2vw;
-    margin-left: -30vw;
+    margin-left: 1vw;
     margin-top: 0.3vw;
     letter-spacing: 0.5px;
     transform: translateY(0);
@@ -1971,10 +2013,10 @@ button:hover {
     grid-column: span 5;
     grid-row: span 1;
     height: 12vw;
-    max-height: 400px;
+  
     /* Added to ensure consistency */
     width: 100%;
-    max-width: 600px;
+    
     overflow: hidden;
     border-radius: 1vw;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -2628,7 +2670,7 @@ button:hover img {
     }
 
     #dataproj {
-        font-size: 2.5vh;
+        font-size: 2.5vw;
         width: 100%;
     }
 
@@ -2666,7 +2708,7 @@ button:hover img {
 
     .containerABT {
         display: block;
-        height: 462vw;
+        height: 280vw;
         width: 95%;
     }
 
@@ -3113,10 +3155,10 @@ textarea {
 }
 
 
-#e{
+/* #e{
     width: 80%;
     margin-left: -20vw;
-}
+} */
 
 
 
