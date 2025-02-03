@@ -15,13 +15,14 @@ body {
     cursor: url('rotated_cursor_image_7.cur'), auto;
     font-family: 'nin', sans-serif;
     overflow-x: hidden;
+    overflow-y: scroll;
     background-color: #1a1a1a;
     background: radial-gradient(circle at 0 0, rgba(65, 105, 225, 0.3) 0%, transparent 30%),
                 radial-gradient(circle at 100% 0, rgba(65, 105, 225, 0.3) 0%, transparent 30%),
                 radial-gradient(circle at 0 100%, rgba(65, 105, 225, 0.3) 0%, transparent 30%),
                 radial-gradient(circle at 100% 100%, rgba(65, 105, 225, 0.3) 0%, transparent 30%),
                 #1a1a1a;
-    animation: gradientWave 8s ease-in-out infinite;
+    
     padding: 1vw 10vw;
 }
 
@@ -44,6 +45,10 @@ body {
     z-index: 100;
     background-color: #131211;
     border-radius: 2vw;
+    border: 1px solid royalblue;
+    box-shadow: 0 0 20px rgba(65, 105, 225, 0.5),
+                0 0 40px rgba(65, 105, 225, 0.3),
+                0 0 60px rgba(65, 105, 225, 0.2);
     
 }
 
@@ -70,6 +75,10 @@ body {
     gap: 0vw;
     border-radius: 1vw;
     overflow: hidden;
+    border: 1px solid royalblue;
+    box-shadow: 0 0 20px rgba(65, 105, 225, 0.5),
+                0 0 40px rgba(65, 105, 225, 0.3),
+                0 0 60px rgba(65, 105, 225, 0.2);
 }
 
 header {
@@ -852,12 +861,11 @@ header.scrolled nav a {
 
 footer {
     height: 40vw;
-    width: 94%;
-    margin: 2vw 3vw;
+    width: 100%;
     background-color: #131211;
     padding: 2vw 2vw;
     border-radius: 2vw;
-    margin-top: 50px;
+    margin-top: 8vw;
     position: relative;
     opacity: 0;
     transform: translateY(2vw);
@@ -871,6 +879,7 @@ footer.show {
     box-shadow: 0 0 15px rgba(65, 105, 225, 0.3),
                 0 0 30px rgba(249, 249, 250, 0.3);
     animation: alternateGlow 3s infinite;
+    position: relative;
 }
 
 @keyframes alternateGlow {
@@ -2790,6 +2799,7 @@ header{
 
 header.scrolled {
     display: none;
+    margin-left: -10vw;
 }
 
 #leetcodeButton {

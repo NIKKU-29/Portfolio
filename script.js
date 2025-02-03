@@ -197,13 +197,18 @@ sliderWrapper.addEventListener('mouseleave', resumeAnimation);
 window.onload = function () {
     const elements = document.querySelectorAll('.fade-in');
     elements.forEach(function (element) {
+        element.style.transform = 'translateX(-200px)'; // Increased negative value to start more from left
+        element.style.opacity = '0';
         setTimeout(function () {
+            element.style.transform = 'translateX(0)';
+            element.style.opacity = '1';
             element.classList.add('active');
-        }, 300); // You can adjust the delay here
+        }, 300);
     });
 };
+
 document.addEventListener('scroll', () => {
-    const header = document.querySelector('header');
+    const header = document.querySelector('container');
     const scrollPosition = window.scrollY;
     if (scrollPosition > window.innerHeight * 0.2) {
         header.classList.add('scrolled');
@@ -211,6 +216,7 @@ document.addEventListener('scroll', () => {
         header.classList.remove('scrolled');
     }
 });
+
 const timeZones = [
     'UTC', 'USA/New York', 'Europe/London',
     'Asia/Kolkata', 'Asia/Tokyo', 'Australia/Sydney'
@@ -237,20 +243,6 @@ document.getElementById('timezone-icon').addEventListener('click', changeTimeZon
 setInterval(updateClock, 1000); // Update clock every second
 updateClock(); // Initialize immediately
 
-function checkStatus() {
-    // Simulate API data
-    return new Promise((resolve) => {
-        setTimeout(() => {
-            const activities = [
-                { status: "online", activity: "Editing in VS Code" },
-                { status: "online", activity: "Listening to Spotify" },
-                { status: "offline", activity: "Inactive" },
-            ];
-            const randomActivity = activities[Math.floor(Math.random() * activities.length)];
-            resolve(randomActivity);
-        }, 2000); // Simulate a 2-second delay
-    });
-}
 
 class SpaceMonsterGame {
   constructor(container) {
