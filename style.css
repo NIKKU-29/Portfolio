@@ -1304,9 +1304,6 @@ button:hover {
     transition: background-color 0.6s ease;
 }
 
-#bento:hover {
-    /* background-color: #908A82; */
-}
 
 /* General Box Styles */
 .box {
