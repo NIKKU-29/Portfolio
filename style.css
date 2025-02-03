@@ -725,7 +725,7 @@ header.scrolled nav a {
 #dataproj {
 
     color: whitesmoke;
-    font-size: 1.5vw;
+    font-size: 1.7vw;
     line-height: 1.6;
     width: 25vw;
     
@@ -754,7 +754,8 @@ header.scrolled nav a {
 
 
 .expertise-slider {
-    min-height: 23vw;
+    margin-top: 2vw;
+    height:auto;
     width: 100%;
     padding-top: 5vw;
     position: relative;
@@ -837,7 +838,7 @@ header.scrolled nav a {
 }
 
 .event-link {
-    font-size: 3vw;
+    font-size: 4vw;
     font-weight: bold;
     padding: 0;
     display: flex;
@@ -2719,6 +2720,7 @@ button:hover img {
         height: 24vh;
         margin-left: 8vw;
     }
+
 
     .con{
         height: 10vw;
