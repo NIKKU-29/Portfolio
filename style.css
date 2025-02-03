@@ -381,10 +381,9 @@ header.scrolled nav a {
 }
 
 .monster {
-
     position: absolute;
-    width: 50px;
-    height: 2vw;
+    width: 7vw;
+    height: 4vw;
     background-image: url('nonsss.gif');
     background-size: cover;
     background-repeat: no-repeat;
@@ -441,13 +440,21 @@ header.scrolled nav a {
 }
 
 #score {
-    font-size: 0.8vw;
+    font-size: 2vw;
     color: white;
     position: absolute;
     top: 1vw;
     left: 1vw;
     z-index: 10;
     display: none;
+}
+
+#timer{
+    font-size: 2vw; 
+    color: white; 
+    position: absolute; 
+    top: 2vw; 
+    right: 4vw;
 }
 
 .Stack {
@@ -1838,7 +1845,7 @@ button:hover {
     position: absolute;
     top: 0.5vw;
     left: 0.5vw;
-    font-size: 1.1vw;
+    font-size: 2.5vw;
     font-weight: bold;
     color: royalblue;
     letter-spacing: 1px;
@@ -2617,7 +2624,7 @@ textarea {
     grid-column: span 5;
     grid-row: span 1;
     height: 15vw;
-    width: 86%;
+    width: 83%;
     margin-left: 6vw;
     border-radius: 1vw;
 }
@@ -2692,21 +2699,23 @@ textarea {
 }
 .line-box {
     padding: 1vw;
-    width: 27vw;
+    width: 26vw;
     height: 42vw;
     margin-bottom: 0vw;
-    margin-left: -0.5vw;
+    margin-left: -1vw;
     border-radius: 1vw;
     grid-column: span 1;
     margin-top: -3vw;
 }
-.logo-box {
-    margin-top: -14vw;
-    margin-left: 23.5vw;
-    width: 143.5%;
-    border-radius: 1vw;
-    height: 33vw;
-}
+
+    .logo-box {
+        margin-top: -14vw;
+        margin-left: 23.5vw;
+        width: 138%;
+        border-radius: 1vw;
+        height: 33vw;
+    }
+
 .inter h3{
     font-size: 5vw;
     
@@ -2847,4 +2856,22 @@ button {
     padding-top: 1vw;
     border: none;
 }
+
+    .expertise-slider{
+        height: 50vw;
+        margin-top: 20vw;
+    }
+
+    .con1 h1{
+        
+        align-content: center;
+        height: 14vw;
+    }
+
+    
+    .con2 h1{
+        align-content: center;
+        height: 12vw;
+        width: 50vw;
+    }
 }

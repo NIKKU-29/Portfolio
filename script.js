@@ -243,95 +243,155 @@ document.getElementById('timezone-icon').addEventListener('click', changeTimeZon
 setInterval(updateClock, 1000); // Update clock every second
 updateClock(); // Initialize immediately
 
-
 class SpaceMonsterGame {
-  constructor(container) {
-    this.container = container;
-    this.scoreElement = document.getElementById('score');
-    this.playButton = document.getElementById('play-button');
-    this.timerElement = document.getElementById('timer'); // Add timer element
-    this.score = 0;
-    this.timeLeft = 20; // Game time in seconds
-    this.timerElement.style.display = 'none';
-    this.playButton.addEventListener('click', () => this.startGame());
-  }
-
-  startGame() {
-    this.container.style.backgroundColor = '#101010';
-    this.playButton.style.display = 'none';
-    this.scoreElement.style.display = 'block';
-    this.timerElement.style.display = 'block'; // Show timer
-    this.startTimer();
-    this.spawnInterval = setInterval(() => this.spawnMonsters(), 1000);
-  }
-
-  startTimer() {
-    this.timerInterval = setInterval(() => {
-      this.timeLeft--;
-      this.timerElement.textContent = `Time Left: ${this.timeLeft}s`;
-      if (this.timeLeft <= 0) {
-        this.endGame();
-      }
-    }, 1000);
-  }
-  spawnMonsters() {
-    const numberOfMonsters = Math.floor(Math.random() * 3) + 1; // Spawn 1 to 3 monsters
-    for (let i = 0; i < numberOfMonsters; i++) {
-      this.spawnMonster();
+    constructor(container) {
+        this.container = container;
+        this.scoreElement = document.getElementById('score');
+        this.playButton = document.getElementById('play-button');
+        this.timerElement = document.getElementById('timer');
+        this.score = 0;
+        this.timeLeft = 20;
+        this.timerElement.style.display = 'none';
+        this.playButton.addEventListener('click', () => this.openGameWindow());
     }
-  }
-  spawnMonster() {
-    const monster = document.createElement('div');
-    monster.classList.add('monster');
-    const containerRect = this.container.getBoundingClientRect();
-    const maxX = containerRect.width - 50;
-    const maxY = containerRect.height - 50;
-    monster.style.left = `${Math.random() * maxX}px`;
-    monster.style.top = `${Math.random() * maxY}px`;
-    monster.addEventListener('click', (e) => this.destroyMonster(e));
-    this.container.appendChild(monster);
-    setTimeout(() => {
-      if (monster.parentElement) {
-        this.container.removeChild(monster);
-      }
-    }, 3000);
-  }
 
-  destroyMonster(e) {
-    const monster = e.target;
-    const explosion = document.createElement('div');
-    explosion.classList.add('explosion');
-    explosion.style.left = `${monster.offsetLeft - 25}px`;
-    explosion.style.top = `${monster.offsetTop - 25}px`;
-    this.container.appendChild(explosion);
-    this.container.removeChild(monster);
-    this.incrementScore(); // Increase score when a monster is destroyed
-    setTimeout(() => {
-      this.container.removeChild(explosion);
-    }, 500);
-  }
+    openGameWindow() {
+        // Create overlay
+        this.overlay = document.createElement('div');
+        this.overlay.style.cssText = `
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        `;
 
-  incrementScore() {
-    this.score++;
-    this.scoreElement.textContent = `Score: ${this.score}`;
-  }
-  endGame() {
-    clearInterval(this.spawnInterval);
-    clearInterval(this.timerInterval);
-    alert(`Game Over! Final Score: ${this.score}`);
-    this.resetGame();
-  }
+        // Create game window
+        this.gameWindow = document.createElement('div');
+        this.gameWindow.style.cssText = `
+            width: 80vw;
+            height: 80vh;
+            background: #101010;
+            position: relative;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        `;
 
-  resetGame() {
-    this.score = 0;
-    this.timeLeft = 20;
-    this.scoreElement.textContent = `Score: ${this.score}`;
-    this.timerElement.textContent = `Time Left: 20s`;
-    this.container.style.backgroundColor = '#101010'; // Reset background color
-    this.scoreElement.style.display = 'none'; // Hide score
-    this.timerElement.style.display = 'none'; // Hide timer
-    this.playButton.style.display = 'block'; // Show play button to start a new game
-  }
+        // Create close button
+        const closeButton = document.createElement('button');
+        closeButton.innerHTML = '×';
+        closeButton.style.cssText = `
+            position: absolute;
+            top: 0.2vw;
+            right: 0.2vw;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            z-index: 1001;
+        `;
+        closeButton.addEventListener('click', () => this.closeGameWindow());
+
+        // Setup game elements in the new window
+        this.gameWindow.appendChild(this.scoreElement);
+        this.gameWindow.appendChild(this.timerElement);
+        this.overlay.appendChild(this.gameWindow);
+        this.gameWindow.appendChild(closeButton);
+        document.body.appendChild(this.overlay);
+
+        // Start the game
+        this.startGame();
+    }
+
+    closeGameWindow() {
+        this.endGame();
+        document.body.removeChild(this.overlay);
+        this.container.appendChild(this.scoreElement);
+        this.container.appendChild(this.timerElement);
+    }
+
+    startGame() {
+        this.gameWindow.style.backgroundColor = '#101010';
+        this.playButton.style.display = 'none';
+        this.scoreElement.style.display = 'block';
+        this.timerElement.style.display = 'block';
+        this.startTimer();
+        this.spawnInterval = setInterval(() => this.spawnMonsters(), 1000);
+    }
+
+    startTimer() {
+        this.timerInterval = setInterval(() => {
+            this.timeLeft--;
+            this.timerElement.textContent = `Time Left: ${this.timeLeft}s`;
+            if (this.timeLeft <= 0) {
+                this.endGame();
+            }
+        }, 1000);
+    }
+
+    spawnMonsters() {
+        const numberOfMonsters = Math.floor(Math.random() * 3) + 1;
+        for (let i = 0; i < numberOfMonsters; i++) {
+            this.spawnMonster();
+        }
+    }
+
+    spawnMonster() {
+        const monster = document.createElement('div');
+        monster.classList.add('monster');
+        const containerRect = this.gameWindow.getBoundingClientRect();
+        const maxX = containerRect.width - 50;
+        const maxY = containerRect.height - 50;
+        monster.style.left = `${Math.random() * maxX}px`;
+        monster.style.top = `${Math.random() * maxY}px`;
+        monster.addEventListener('click', (e) => this.destroyMonster(e));
+        this.gameWindow.appendChild(monster);
+        setTimeout(() => {
+            if (monster.parentElement) {
+                monster.remove();
+            }
+        }, 3000);
+    }
+
+    destroyMonster(e) {
+        const monster = e.target;
+        const explosion = document.createElement('div');
+        explosion.classList.add('explosion');
+        explosion.style.left = `${monster.offsetLeft - 25}px`;
+        explosion.style.top = `${monster.offsetTop - 25}px`;
+        this.gameWindow.appendChild(explosion);
+        monster.remove();
+        this.incrementScore();
+        setTimeout(() => explosion.remove(), 500);
+    }
+
+    incrementScore() {
+        this.score++;
+        this.scoreElement.textContent = `Score: ${this.score}`;
+    }
+
+    endGame() {
+        clearInterval(this.spawnInterval);
+        clearInterval(this.timerInterval);
+        alert(`Game Over! Final Score: ${this.score}`);
+        this.resetGame();
+    }
+
+    resetGame() {
+        this.score = 0;
+        this.timeLeft = 20;
+        this.scoreElement.textContent = `Score: ${this.score}`;
+        this.timerElement.textContent = `Time Left: 20s`;
+        this.scoreElement.style.display = 'none';
+        this.timerElement.style.display = 'none';
+        this.playButton.style.display = 'block';
+    }
 }
 const sliderTrack = document.querySelector('.slider-track');
 const slides = document.querySelectorAll('.slide');
