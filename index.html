@@ -9,26 +9,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
     <link rel="stylesheet" href="style.css">
-
-
-
 </head>
 
 <body>
-
     <div class="music-icon" onclick="toggleAudio()">
         <img src="music.svg" alt="Music Icon">
         <div class="close-overlay" id="close-overlay">✖</div>
     </div>
-
-   
     <audio id="background-audio" src="spaceX.mp3" autoplay loop></audio>
-
-
-    
-
     <div class="fade-in">
-
         <header>
             <div class="logo " id="nikku">Nemish Sharma</div>
             <img src="pf.jpg" alt="Logo" class="logo-img">
@@ -39,7 +28,6 @@
             </nav>
         </header>
         <br>
-
         <div class="container">
             <div class="hero">
                 <h1>Let's <strong><span class="dynamic-text" data-text="Design"></span></strong></h1>
@@ -49,7 +37,6 @@
                     <br>
                 <p>Based in India, I develop solutions that leave a lasting impact alongside delivering exceptional user
                     experiences.</p>
-
                 <div class="social">
                     <button onclick="window.open('https://github.com/NIKKU-29', '_blank')">
                         <i class="fa-brands fa-github"></i>
@@ -58,38 +45,29 @@
                         <i class="fa-brands fa-linkedin"></i>
                     </button>
                 </div>
-
                 <button id="resume" onclick="window.open('NEMISH_SHARMA_RESUME_2025.pdf', '_blank')">
                     <strong
                         style="font-family: 'nin', Tahoma, Geneva, Verdana, sans-serif;">Résumé</strong>
                     <img class="down" src="down.svg" alt="">
                 </button>
             </div>
-
             <div class="image-wrapper">
-
                 <div id="benti">
-
                     <div class="rag">
                         <img src="pf.jpg" alt="">
                         <div class="fonti-boxA">
                             <div class="top-section">
                                 <div id="game-container">
-        
                                     <div id="play-button">PLAY</div>
                                     <div id="timer"
                                         style="font-size: 0.9vw; color: white; position: absolute; top: 1vw; right: 1vw;">
                                         Time Left: 20s</div>
                                     <div id="score">Score: 0</div>
-
                                 </div>
-
                             </div>
                         </div>
-
                     </div>
                     <div>
-                        
                         <hr id="seperator" style="height: 2px; background: linear-gradient(to right, royalblue, whitesmoke); border: none;">
                         <div class="Stack">
                             Stack & Technologies
@@ -115,7 +93,6 @@
                                 <i class="fab fa-js" "></i>
                                 <span style="font-size: 1.1vw;"> JavaScript</span>
                             </div>
-
                             <div class="language-btn">
                                 <i class="fas fa-database"></i>
                                 <span>SQL</span>
@@ -133,12 +110,9 @@
                                 <span>C#</span>
                             </div>
                         </div>
-                        
                     </div>
-                    
                 </div>
                 <div>
-
                     <div class="containerL">
                         <div class="progress-container">
                             <div class="milestone school">
@@ -150,9 +124,7 @@
                                             <br>
                                             Little Flowers Public School
                                         </em>
-
                                     </p>
-
                                 </div>
                             </div>
 
@@ -164,32 +136,21 @@
                                             B.Tech [2021 -2025 ]
                                             <br>
                                             Maharaja Agrasen Instiute of Technology
-
                                         </em>
                                     </p>
-
                                 </div>
                             </div>
-
                             <div class="progress-bar-background">
                                 <div class="progress-bar"></div>
                             </div>
-
                             <div class="progress-text"></div>
                         </div>
-
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
-
-
-
-
     <div class="expertise-slider">
-
         <div class="con1">
             <h1>JavaScript</h1>
             <h1>React.js</h1>
@@ -201,7 +162,6 @@
             <h1>C++</h1>
             <h1>Git</h1>
         </div>
-        
         <div class="con2">
             <h1>Redux</h1>
             <h1>Express.js</h1>
@@ -223,13 +183,9 @@
             <h1>Node.js</h1>
             <h1>MongoDB</h1>
         </div>
-
-
         <div class="slider-wrapper">
-
         </div>
     </div>
-
     <div ></div>
     <div id="abt">
         <div id="bento" >
@@ -237,10 +193,6 @@
             <div class="box discount-box" >
                 <img src="diddy.gif" alt="Discount Logo">
             </div>
-
-            <!-- Font Box -->
-
-
             <div class="box font-box">
                 <a href="https://github.com/NIKKU-29" target="_blank"
                     style="display: flex; height: 5vw; align-items: center; justify-content: flex-start; margin-bottom: 0vw;">
@@ -249,8 +201,6 @@
                     <i class="fas fa-arrow-right" class="gtarr"></i>
                 </a>
             </div>
-
-
             <script>
                 const changingTexts = ['Crafting <br> Digital <br> Dreams', 'Innovate <br> with <br> Purpose', 'Empower <br> Through <br> Code'];
                 let textIndex = 0;
@@ -260,11 +210,8 @@
                     textElement.innerHTML = changingTexts[textIndex];
                     textIndex = (textIndex + 1) % changingTexts.length;
                 }
-
                 setInterval(changeText, 5000); // Change text every 3 seconds // Change text every 3 seconds
             </script>
-
-            <!-- Sign Box with video -->
             <div class="box sign-box">
                 <div class="vertical-slider">
                     <div class="slider-track">
@@ -294,9 +241,6 @@
                     </div>
                 </div>
             </div>
-
-
-            <!-- iPhone Box with video -->
             <div class="box phone-box">
 
                 <div class="clock" id="clock"></div>
@@ -304,14 +248,8 @@
                     <span class="timezone-text" id="timezone-text">Asia/Kolkata</span>
                     <span class="timezone-icon" id="timezone-icon">↗</span>
                 </div>
-
-
             </div>
-
-            <!-- Logo Box with video -->
-
             <div class="logo-box">
-
                 <div class="background">
                     <iframe
                         src="https://leetcard.jacoblin.cool/Nikku29?theme=dark&font=Paytone%20One&ext=contest&bg=9c1e40&text=FFFFFF"
@@ -324,15 +262,11 @@
                     </div>
                 </a>
             </div>
-
-            <!-- Banner Box with video -->
             <div class="box banner-box" >
                 <p class="one"> Worked Over</p>
                 <p class="two">10<span>+</span></p>
                 <p class="three">Projects</p>
             </div>
-
-            <!-- Bottle Box with video -->
             <div class="bottle-box">
                 <div class="slider-container">
                     <div class="slider">
@@ -367,11 +301,6 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Additional Box with video -->
-
-
-            <!-- Sign Box 2 with video -->
             <div class="box line-box"
                 onclick="document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });">
                 <div class="inter">
@@ -381,10 +310,7 @@
                     <img src="driller.gif" alt="" class="flip-horizontal">
                 </div>
             </div>
-
         </div>
-
-
         <div class="con">
             <div class="Proj"><strong>Recent Works</strong></div>
         </div>
@@ -424,17 +350,12 @@
                     </p>
                 </div>
             </div>
-
             <div class="left-panel">
                 
                 <a href="https://nikku-29.github.io/VinesAndCompany/" class="event-linkB">
                     <button>Visit Website</button>
                 </a>
-
             </div>
-
-
-
             <div class="right-panel1">
                 <hr style="height: 5px; background: linear-gradient(to right, #001aFF, whitesmoke); border: none;">
 
@@ -469,26 +390,18 @@
                         </button>
                         <br>
                         <br>
-
                     </p>
                 </div>
             </div>
-
             <div class="left-panel1">
                 <a href="#" class="event-linkB1">
                     <button>Coming soon</button>
                 </a>
             </div>
         </div>
-
-
-
-
         <footer id="contact-main">
-
             <div class="contact" id="cont"><em> <strong>Contact me</strong></em></em></div>
             <div id="goli">
-
                 <div id="sheesh">
                     <form id="contactForm">
                         <div class="form-group">
@@ -506,56 +419,33 @@
                         <button type="submit">Send Message</button>
                     </form>
                 </div>
-
-
-
-                <!-- <div>SO SOMETING JETE</div> -->
-
-
                 <div id="lastR">
                     <div class="find"><em> <strong>Find Me</strong></em></em></div>
-
                     <div id="lastkill">
                         <a href="https://dev.to/nemish" target="_blank">
                             <div id="devImg"></div>
                         </a>
                     </div>
-
-
                     <div id="lastbutton"">
 
-                    <!-- <button id=" instaButton"
-                        onclick="window.open('https://www.instagram.com/_nemish.sharma/', '_blank')">
-                        <i class="fab fa-instagram"></i>
-                        </button> -->
-
-                        <!-- Twitter Button -->
                         <button id="twitterButton" onclick="window.open('https://x.com/Nesh61839047', '_blank')">
                             <i class="fab fa-twitter"></i>
                         </button>
-
                         <button id="discordButton" onclick="window.open('https://discord.gg/WzPCnWxYZZ', '_blank')">
                             <i class="fab fa-discord"></i>
                         </button>
                         <button id="leetcodeButton" onclick="window.open('https://leetcode.com/u/NIKKU29/', '_blank')">
                             <img src="leetcode.svg" alt=""> <!-- You can use a relevant icon for LeetCode -->
                         </button>
-
                     </div>
-
                 </div>
-
-
             </div>
     </div>
     </footer>
-
     <div style="justify-content: center;">
         <p style=" margin-left: 4vw; color:white;">&copy; 2024 Nemish Sharma. All rights reserved.</p>
     </div>
-
     <script src="script.js"></script>
-
 </html>
 <div id="root"></div>
 <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
@@ -570,6 +460,5 @@
             </div>
         );
     }
-
     ReactDOM.render(<App />, document.getElementById('root'));
 </script>
