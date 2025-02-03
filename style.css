@@ -1,17 +1,9 @@
-.flip-horizontal {
-    transform: scaleX(-1);
-    /* Flip the image horizontally */
-}
-
-
 @font-face {
     font-family: 'nin';
     src: url('dpcomic.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
 }
 
-
+.flip-horizontal { transform: scaleX(-1); }
 
 * {
     margin: 0;
@@ -23,66 +15,17 @@ body {
     cursor: url('rotated_cursor_image_7.cur'), auto;
     font-family: 'nin', sans-serif;
     overflow-x: hidden;
-    margin: 0;
-    padding: 10vw;
-    padding-top: 1vw;
-    position: relative;
     background-color: #1a1a1a;
-    background: radial-gradient(
-        circle at 0 0, 
-        rgba(65, 105, 225, 0.3) 0%, 
-        transparent 30%
-    ),
-    radial-gradient(
-        circle at 100% 0, 
-        rgba(65, 105, 225, 0.3) 0%, 
-        transparent 30%
-    ),
-    radial-gradient(
-        circle at 0 100%, 
-        rgba(65, 105, 225, 0.3) 0%, 
-        transparent 30%
-    ),
-    radial-gradient(
-        circle at 100% 100%, 
-        rgba(65, 105, 225, 0.3) 0%, 
-        transparent 30%
-    ),
-    #1a1a1a;
+    background: radial-gradient(circle at 0 0, rgba(65, 105, 225, 0.3) 0%, transparent 30%),
+                radial-gradient(circle at 100% 0, rgba(65, 105, 225, 0.3) 0%, transparent 30%),
+                radial-gradient(circle at 0 100%, rgba(65, 105, 225, 0.3) 0%, transparent 30%),
+                radial-gradient(circle at 100% 100%, rgba(65, 105, 225, 0.3) 0%, transparent 30%),
+                #1a1a1a;
     animation: gradientWave 8s ease-in-out infinite;
+    padding: 1vw 10vw;
 }
 
-@keyframes gradientWave {
-    0%, 100% {
-        background-size: 50% 50%, 50% 50%, 50% 50%, 50% 50%;
-    }
-    50% {
-        background-size: 60% 60%, 60% 60%, 60% 60%, 60% 60%;
-    }
-}
-
-@keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
-@keyframes ripple {
-    0% {
-        transform: scale(0);
-        opacity: 1;
-    }
-    100% {
-        transform: scale(4);
-        opacity: 0;
-    }
-}
+/*  */
 
 .ripple {
     position: absolute;
@@ -92,22 +35,6 @@ body {
     pointer-events: none;
     z-index: 9999;
 }
-
-body::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 20px;
-    height: 20px;
-    background: rgba(255, 255, 255, 0.3);
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    animation: ripple 1s ease-out infinite;
-    pointer-events: none;
-    z-index: 9999;
-}
-
 
 /* Video background styling */
 
