@@ -656,8 +656,9 @@ header.scrolled nav a {
 
 
 .expertise-slider {
-    margin-top: 2vw;
-    height:auto;
+    margin-top: 20vw;
+    margin-bottom: 20vw;
+    height:100%;
     width: 100%;
     padding-top: 5vw;
     position: relative;
@@ -683,10 +684,10 @@ header.scrolled nav a {
 .con1 h1 {
     margin-right: 2vw;
     width: 35vw;
-    height: 8vw;
+    height: 9vw;
     background-color: #131211;
     padding: 2vw;
-    margin-bottom: 0.5vw;
+    margin-bottom: 1vw;
     margin-top: 0.5vw;
     border: 0.15vw solid royalblue;
     border-radius: 5vw;
