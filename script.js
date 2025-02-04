@@ -464,4 +464,4 @@ function showSlide(index) {
 showSlide(currentSlide);
 setInterval(() => {
     showSlide(currentSlide + 1);
-}, 3000);
+}, 8000);
